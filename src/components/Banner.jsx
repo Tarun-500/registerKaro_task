@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -50,7 +49,7 @@ const Banner = () => {
           </Col>
         </Row>
       </Container>
-      <div className="vertical-buttons">
+      {/* <div className="vertical-buttons">
         <Link to="/annual-compliance" className="btn btn-light">
           Annual Compliance
         </Link>
@@ -63,7 +62,7 @@ const Banner = () => {
         <Link to="/tax-filing" className="btn btn-light">
           Tax Filing
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

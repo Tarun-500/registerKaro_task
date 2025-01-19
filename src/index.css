@@ -7,9 +7,11 @@
 :root {
   /* colors */
   --blue-color: #1c4670;
+  --blue-bg: #011b5b;
   --text-color: #272d37;
   --text-color-light: #666666;
   --white-color: #fff;
+  --text-light: #aab5cd;
   --brown-color: #bb162b;
   --primary-color: #ffa229;
   --green-color: #a5c937;
@@ -20,17 +22,37 @@
     #d0d0d0 50%,
     rgba(0, 0, 0, 0) 100%
   );
+  --gradient-border: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    #d0d0d0 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   /* Font weight */
   --fw-700: 700;
+  --fw-500: 500;
+  --fw-400: 400;
 
   /* Font family */
   --font-primary: "Inter", sans-serif;
+
+  /* font size */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
 }
 
 /* ---- common css ----- */
+a{
+  text-decoration: none !important;
+  color: var(--text-light);
+}
 .text-blue {
   color: var(--blue-color);
+}
+.light-text {
+  color: var(--text-light) !important;
 }
 .bg-blue {
   background-color: var(--blue-color);
@@ -39,7 +61,17 @@
   padding-top: 70px;
   padding-bottom: 70px;
 }
-
+.container-fluid {
+  max-width: 1440px;
+  margin: auto;
+}
+.para-1 {
+  font-family: var(--font-primary);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
 .head-2 {
   font-family: var(--font-primary);
   font-size: 22px;
@@ -47,14 +79,54 @@
   line-height: 1.2;
 }
 
-/* ----- header ----- */
+/* ----- header  section 1 ----- */
 header {
   .header_top_bar {
     background-color: var(--blue-color);
     padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+    span {
+      font-family: var(--font-primary);
+      font-size: var(--fs-14);
+      font-weight: var(--fw-400);
+      line-height: 1.2;
+      color: var(--white-color);
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 16px;
+      cursor: pointer;
+
+      & img {
+        max-width: 18px;
+      }
+      &:nth-child(2) {
+        padding: 0 16px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 1px;
+          background: var(--gradient-border);
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 1px;
+          background: var(--gradient-border);
+        }
+      }
+    }
   }
-
-
 
   .header-section {
     border-bottom: 1px solid #ebebeb;
@@ -86,7 +158,6 @@ header {
       margin-bottom: 0.5rem;
     }
   }
-  
 }
 
 .section_trusted_by {
@@ -96,12 +167,6 @@ header {
 }
 
 /* ----- app section --- */
-
-/* ----- footer ---- */
-
-.section_footer {
-  background-color: var(--blue-color);
-}
 
 /* --- accordion ---- */
 /* Container Styles */
@@ -289,7 +354,7 @@ header {
   transform: translateY(-5px);
 }
 
-/* ----- step section ------ */ 
+/* ----- step section ------ */
 .steps-container {
   display: flex;
   justify-content: space-around;
@@ -458,10 +523,7 @@ header {
   }
 }
 
-
 /* -------- banner section ------------ */
-
-// Banner.css
 .banner-section {
   background: linear-gradient(to right, #fdfbfb, #ebedee);
   position: relative;
@@ -488,7 +550,7 @@ header {
   height: auto;
 }
 .vertical-buttons {
-  position: fixed;
+  /* position: fixed; */
   bottom: 20px;
   right: 10px;
   display: flex;
@@ -505,5 +567,29 @@ header {
     bottom: 10px;
     right: 50%;
     transform: translateX(50%);
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    .header_top_bar {
+      padding: 8px;
+      justify-content: end;
+      gap: 12px;
+      span {
+        font-family: var(--font-primary);
+        font-size: var(--fs-12);
+        justify-content: start;
+        gap: 8px;
+
+        & img {
+          max-width: 16px;
+        }
+
+        &:nth-child(2) {
+          padding: 0 10px;
+        }
+      }
+    }
   }
 }
