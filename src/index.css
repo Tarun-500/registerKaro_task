@@ -1,68 +1,509 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --blue-color: #1c4670;
+  --text-color: #272d37;
+  --text-color-light: #666666;
+  --white-color: #fff;
+  --brown-color: #bb162b;
+  --primary-color: #ffa229;
+  --green-color: #a5c937;
+  --gradient-color: linear-gradient(96.22deg, #ffa229 9%, #1c4670 59.37%);
+  --gradient-color-2: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    #d0d0d0 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  /* Font weight */
+  --fw-700: 700;
+
+  /* Font family */
+  --font-primary: "Inter", sans-serif;
+}
+
+/* ---- common css ----- */
+.text-blue {
+  color: var(--blue-color);
+}
+.bg-blue {
+  background-color: var(--blue-color);
+}
+.section-space {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.head-2 {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ----- header ----- */
+header {
+  .header_top_bar {
+    background-color: var(--blue-color);
+    padding: 12px;
+  }
+
+
+
+  .header-section {
+    border-bottom: 1px solid #ebebeb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+  }
+  .logo {
+    max-height: 50px;
+  }
+  .navbar-nav .nav-link {
+    color: #333;
+    margin-right: 1rem;
+    font-weight: 500;
+  }
+  .navbar-nav .btn {
+    font-weight: bold;
+  }
+  .search-modal {
+    top: 30%;
+  }
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav-link {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+}
+
+.section_trusted_by {
+  & h2 {
+    margin-bottom: 40px;
+  }
+}
+
+/* ----- app section --- */
+
+/* ----- footer ---- */
+
+.section_footer {
+  background-color: var(--blue-color);
+}
+
+/* --- accordion ---- */
+/* Container Styles */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+}
+
+.faq-highlight {
+  color: orange;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Accordion Styles */
+.faq-accordion {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  gap: 10px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.faq-item {
+  background: linear-gradient(to right, #ffc107, #2196f3);
+  border-radius: 10px;
+  color: #3b3b3b;
+  overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: transform 0.2s ease-in-out;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.faq-item:hover {
+  transform: scale(1.02);
+}
+
+.faq-question {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-arrow {
+  font-size: 16px;
+  color: #3b3b3b;
+}
+
+.faq-answer {
+  background: #fff;
+  color: #3b3b3b;
+  padding: 15px 20px;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Show More Button */
+.faq-show-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.faq-show-more:hover {
+  background-color: #00509e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 10px;
   }
-  a:hover {
-    color: #747bff;
+
+  .faq-title {
+    font-size: 20px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    font-size: 12px;
+  }
+}
+/* -------- testimonial --------- */
+
+.testimonial-container {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #083b66;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.testimonial-slider {
+  padding: 20px 0;
+}
+
+.testimonial-card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+  font-size: 36px;
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonial-designation {
+  font-size: 14px;
+  color: #666;
+}
+
+.testimonial-rating {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff9900;
+}
+
+.testimonial-rating-count {
+  font-size: 14px;
+  color: #666;
+  margin-left: 8px;
+}
+
+/* ----- blog section ------ */
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ----- step section ------ */ 
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f39c12;
+  padding: 20px 10px;
+  flex-wrap: wrap; /* For responsiveness */
+}
+
+/* Individual step */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+/* Icon container */
+.icon-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Background colors for icons */
+.red {
+  background-color: #e74c3c;
+}
+
+.green {
+  background-color: #27ae60;
+}
+
+.orange {
+  background-color: #f39c12;
+}
+
+.gray {
+  background-color: #7f8c8d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .step {
+    margin: 20px 0;
+  }
+}
+
+/* -------- why choose section --------- */
+
+.why_choose_section {
+  .why-choose-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Section Title & Subtitle */
+  .section-subtitle {
+    color: #f39c12;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .section-title {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  .section-description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  /* Feature Card */
+  .feature-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Icon Container */
+  .icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  /* Icon Background Colors */
+  .orange {
+    background-color: #f39c12;
+  }
+
+  .green {
+    background-color: #27ae60;
+  }
+
+  .blue {
+    background-color: #3498db;
+  }
+
+  .red {
+    background-color: #e74c3c;
+  }
+
+  /* Feature Title & Text */
+  .feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .feature-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+    }
+
+    .feature-box {
+      padding: 15px;
+    }
+
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+}
+
+
+/* -------- banner section ------------ */
+
+// Banner.css
+.banner-section {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  position: relative;
+}
+.text-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.text-section p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.stats div {
+  text-align: center;
+}
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
+.vertical-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vertical-buttons .btn {
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .vertical-buttons {
+    flex-direction: row;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
