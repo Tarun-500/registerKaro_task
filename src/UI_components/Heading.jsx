@@ -27,7 +27,7 @@ font-size: var(--fs-32);
 font-weight:  var(--fw-700);
 line-height: 1.3;
 letter-spacing: -0.015em; 
-
+margin:0;
 @media(max-width: 991px){
 font-size: var(--fs-24);
 } 

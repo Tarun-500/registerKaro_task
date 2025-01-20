@@ -1,60 +1,70 @@
-import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-// import { FaLightbulb } from "react-icons/fa";
+import YoutubeImg from "../assets/images/youtube_banner.png"
+import Heading from "../UI_components/Heading";
+import { IoMdFlashlight } from "react-icons/io";
+import { MdOutlineAutoGraph } from "react-icons/md";
 
 const VideoSection = () => {
   return (
-    <div style={{ backgroundColor: "#1a3b5d", color: "white", padding: "4rem 0" }}>
+    <section className="section_video section-space bg-blue">
       <Container>
         <Row className="align-items-center">
-  
-          <Col md="6" className="mb-4 mb-md-0">
-            <h2>Our Video Introductions</h2>
-            <p className="text-muted" style={{ color: "#d9d9d9" }}>
-              Velit purus egestas tellus phasellus. Mattis eget sed faucibus magna vulputate pellentesque a diam tincidunt
-              aptis dui.
+
+          <Col md="6">
+            <Heading
+              mainHeading={"Our Video Introductions"}
+              mainHeadingColor={"var(--white-color)"}
+              align="left"
+            />
+
+            <p className="para-1 light-text">
+              Velit purus egestas tellus phasellus. Mattis eget sed faucibus magna vulputate pellentesque a diam tincidunt apis dui.
             </p>
+
             <div className="mt-4">
-              <div className="d-flex align-items-start mb-4">
-                {"Icon"}
+              <div className="d-flex align-items-start gap-3 mb-4">
+                <div className="circle-btn circle-btn-primary">
+                <IoMdFlashlight />
+                </div>
                 <div>
-                  <h5 className="mb-1">Explore ideas together</h5>
-                  <p className="mb-0 text-muted" style={{ color: "#d9d9d9" }}>
+                  <h5 className="head-5 text-white">Explore ideas together</h5>
+                  <p className="para-1 light-text">
                     Engage audience segments and finally create actionable insights. Amplify vertical integration.
                   </p>
                 </div>
               </div>
-              <div className="d-flex align-items-start">
-                {"Icon"}
+              <div className="d-flex align-items-start  gap-3">
+                <div className="circle-btn circle-btn-primary">
+                <MdOutlineAutoGraph />
+                </div>
                 <div>
-                  <h5 className=" ">Bring those ideas to life</h5>
-                  <p className="mb-0 text-muted" style={{ color: "#d9d9d9" }}>
+                  <h5 className="head-5 text-white">Bring those ideas to life</h5>
+                  <p className="para-1 light-text">
                     Engage audience segments and finally create actionable insights. Amplify vertical integration.
                   </p>
                 </div>
               </div>
             </div>
           </Col>
- 
+
           <Col md="6">
             <div className="position-relative">
               <img
-                src="https://via.placeholder.com/500x300"
+                src={YoutubeImg}
                 alt="Video Thumbnail"
                 className="img-fluid rounded shadow"
               />
-              <Button
-                color="danger"
+              {/* <Button 
                 className="position-absolute top-50 start-50 translate-middle"
                 style={{ borderRadius: "50%", padding: "1rem" }}
               >
                 <i className="bi bi-play-fill" style={{ fontSize: "2rem" }}></i>
-              </Button>
+              </Button> */}
             </div>
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 

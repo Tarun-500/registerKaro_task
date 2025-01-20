@@ -1,5 +1,6 @@
-import { Container, Row, Col, Button } from "reactstrap";
-
+import { Container, Row, Col } from "reactstrap";
+import Button from "../UI_components/Button";
+import AboutImg from "../assets/images/about_us.jpg"
 const AboutSection = () => {
   return (
     <div style={{ backgroundColor: "#f9f9f9", padding: "4rem 0" }}>
@@ -26,41 +27,16 @@ const AboutSection = () => {
               I would strongly recommend their services to any organization
               that is looking for solid, reliable, and predictable outcomes.
             </p>
-            <Button color="primary" outline>
-              Learn More
-            </Button>
+            <Button color={"var(--blue-color)"} text={"Learn More"} />
           </Col>
-
-          {/* Image Section */}
+ 
           <Col md="6">
             <div className="position-relative">
               <img
-                src="https://via.placeholder.com/500x300"
+                src={AboutImg}
                 alt="Team"
-                className="img-fluid rounded shadow"
-                style={{
-                  border: "5px solid #FF8C00",
-                  borderRadius: "8px",
-                }}
-              />
-              {/* Floating Icon */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  backgroundColor: "#1A7F6F",
-                  color: "white",
-                  borderRadius: "50%",
-                  width: "40px",
-                  height: "40px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-               { "Icon"}
-              </div>
+                className="img-fluid"
+              /> 
             </div>
           </Col>
         </Row>
