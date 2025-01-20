@@ -24,6 +24,7 @@ const TrustedBySection = () => {
     const settings = {
         dots: false,
         infinite: true,
+        arrows: false,
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -55,11 +56,11 @@ const TrustedBySection = () => {
                     <Col>
                         <Slider {...settings}>
                             {logos.map((logo, index) => (
-                                <div key={index} className="d-flex justify-content-center">
+                                <div key={index} className="cursor-pointer">
                                     <img
                                         src={logo.src}
                                         alt={logo.alt}
-                                        style={{ width: "150px", margin: "0 auto" }}
+                                        style={{ width: "138px", margin: "0 auto" }}
                                     />
                                 </div>
                             ))}

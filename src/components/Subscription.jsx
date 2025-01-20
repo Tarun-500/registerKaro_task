@@ -1,54 +1,56 @@
 import React from "react";
 import { Container, Row, Col, Input, Button, Form, FormGroup } from "reactstrap";
 import styled from "styled-components";
+import Heading from "../UI_components/Heading";
 
-const SubscriptionSection = styled.section`
-  background: linear-gradient(90deg, #ffa229, #1c4670);
-  color: #fff;
+const SubscriptionSection = styled.section` 
   text-align: center;
-  padding: 50px 20px;
+  padding: 64px 20px;
+ font-family:var(--font-primary);
+color: var(--white-color);
 
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .subheading {
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-  }
 
   .form-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 512px; 
+    border-radius:6px;
+    width:100%;
+    margin: 32px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+    height:46px; 
   }
 
-  .form-input {
-    flex-grow: 1;
-    margin-right: 10px;
-
-    @media (max-width: 768px) {
+  .form-control {
+  height: 100%;
+   flex-grow: 1; 
+   margin: 0 !important;
+border-radius:6px 0 0 6px;
+border:none;
+    @media (max-width: 576px) {
       margin-right: 0;
       margin-bottom: 10px;
     }
   }
 
-  .features {
-    margin-top: 20px;
+
+button{  
+ height: 100%;
+ padding:12px 20px;
+ color: var(--white-color);  
+font-size: var(--fs-15);
+font-weight: var(--fw-600);
+line-height: 1.5; 
+border-radius:0 6px  6px 0;
+border:none;
+background-color: var(--primary-color); 
+
+}
+
+  .features { 
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 24px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -58,49 +60,47 @@ const SubscriptionSection = styled.section`
     .feature {
       display: flex;
       align-items: center;
-      gap: 10px;
-
-      i {
-        color: #ffa229;
-      }
+      gap: 16px; 
     }
   }
 `;
 
 const Subscription = () => {
   return (
-    <SubscriptionSection>
-      <Container>
+    <SubscriptionSection className="bg-gradient-1">
+      <Container fluid>
         <Row>
           <Col>
-            <p className="subheading">1% OF THE INDUSTRY</p>
-            <h1>Welcome to your new digital reality. Now.</h1>
-            <div className="form-container">
-              <Form inline>
-                <FormGroup className="form-input">
-                  <Input
-                    type="email"
-                    placeholder="Enter Your Email"
-                    className="form-control"
-                  />
-                </FormGroup>
-                <Button color="warning" className="fw-bold">
-                  Submit
-                </Button>
-              </Form>
-            </div>
+            <Heading
+              subheading="1% OF THE INDUSTRY"
+              mainHeading="Welcome to your new digital reality. Now."
+              align="center"
+              subHeadingColor={"var(--white-color)"}
+              mainHeadingColor={"var(--white-color)"}
+            />
+
+            <Form inline className="form-container">
+              <Input
+                type="email"
+                placeholder="Enter Your Email"
+                className="form-control"
+              />
+              <button className="">
+                Submit
+              </button>
+            </Form>
             <div className="features">
               <div className="feature">
                 <i className="fas fa-check-circle"></i>
-                <span>Instant results</span>
+                <span className="para-1">Instant results</span>
               </div>
               <div className="feature">
                 <i className="fas fa-check-circle"></i>
-                <span>User-friendly interface</span>
+                <span className="para-1">User-friendly interface</span>
               </div>
               <div className="feature">
                 <i className="fas fa-check-circle"></i>
-                <span>Personalized customization</span>
+                <span className="para-1">Personalized customization</span>
               </div>
             </div>
           </Col>

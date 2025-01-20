@@ -1,4 +1,4 @@
-import BlogCard from "./UI_components/BlogCard";
+import BlogCard from "../UI_components/BlogCard";
 
 const BlogSection = () => {
   const blogs = [
