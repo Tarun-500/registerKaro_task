@@ -1,4 +1,9 @@
-import  { useState } from "react"; 
+import { useState } from "react";
+import { Container } from "reactstrap";
+import Heading from "../UI_components/Heading";
+import Button from "../UI_components/Button";
+import { LuArrowRight, LuChevronRight, LuChevronDown } from "react-icons/lu";
+ 
 
 const FAQAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -16,39 +21,51 @@ const FAQAccordion = () => {
   ];
 
   return (
-    <div className="faq-container">
-      <h2 className="faq-title">
-        <span className="faq-highlight">FAQ</span>
-        <br />
-        Frequent Ask Questions
-      </h2>
-      <div className="faq-accordion">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`faq-item ${activeIndex === index ? "active" : ""}`}
-            onClick={() => toggleAccordion(index)}
-          >
-            <div className="faq-question">
-              {faq}
-              <span className="faq-arrow">
-                {activeIndex === index ? "▼" : "▶"}
-              </span>
-            </div>
-            {activeIndex === index && (
-              <div className="faq-answer">
-                <p>
-                  Yes, this software allows you to recover deleted files from
-                  your desktop with ease.
-                </p>
+    <section className="faq-container">
+      <Container fluid>
+
+        <Heading
+          subheading={"FAQ"}
+          subHeadingColor={"var(--primary-color);"}
+          mainHeading={"Frequent Ask Questions"}
+          mainHeadingColor={"var(--text-dark-1)"}
+          align="center"
+        />
+
+
+        <div className="faq-accordion">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq-item ${activeIndex === index ? "active" : ""}`}
+              onClick={() => toggleAccordion(index)}
+            >
+              <div className="faq-question">
+                {faq}
+                <span className="faq-arrow">
+                  {activeIndex === index ? <LuChevronDown /> : <LuChevronRight />} 
+                </span>
               </div>
-            )}
-          </div>
-        ))}
-      </div>
-      <button className="faq-show-more">Show more →</button>
-    </div>
+              {activeIndex === index && (
+                <div className="faq-answer">
+                  <p>
+                    Yes, this software allows you to recover deleted files from
+                    your desktop with ease.
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+         <div className="text-center">
+         <Button color={"var(--blue-color)"} text={"Show more"} icon={<LuArrowRight />} />
+         </div>
+
+      </Container>
+
+    </section>
   );
 };
 
-export default FAQAccordion;
+export default FAQAccordion; 

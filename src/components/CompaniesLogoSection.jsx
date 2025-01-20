@@ -23,6 +23,7 @@ const CompaniesLogoSection = () => {
 
     const settings = {
         dots: false,
+        arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 6,
@@ -49,16 +50,16 @@ const CompaniesLogoSection = () => {
 
     return (
         <section className="section_companies_logo section-space">
-            <Container className="">
+            <Container fluid className="">
                 <Row>
                     <Col>
                         <Slider {...settings}>
                             {logos.map((logo, index) => (
-                                <div key={index} className="d-flex justify-content-center">
+                                <div key={index}>
                                     <img
                                         src={logo.src}
                                         alt={logo.alt}
-                                        style={{ width: "150px", margin: "0 auto" }}
+                                        style={{ width: "auto", height:"48px", margin: "0 auto" }}
                                     />
                                 </div>
                             ))}

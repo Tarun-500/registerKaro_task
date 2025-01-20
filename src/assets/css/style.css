@@ -1,3 +1,88 @@
+/* ------- step section ------ */
+.section_step {
+  background: var(--primary-color);
+
+  & .steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 70px;
+    gap: 60px;
+  }
+
+
+  .red {
+    background-color: #EB5757;
+  }
+  .green {
+    background-color: #27AE60;
+  }
+  .orange {
+    background-color: #F2994A;
+  }
+  .gray {
+    background-color: #828282;
+  }
+
+
+  .icon-container {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 24px;
+    flex: none;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .para-3 {
+    color: var(--text-dark-1);
+    margin: 0;
+  }
+} 
+/* ------- faq section ------- */
+
+.faq-container {
+  padding: 45px 0;
+
+  & .faq-accordion {
+    max-width: 1272px;
+    margin: 40px auto;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-item {
+    position: relative;
+    border-width: 1px, 1px, 0px, 1px;
+    border-style: solid;
+    border-color: #00000020;
+    box-shadow: 0px 0px 5.22px 0.78px #00000024;
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(180deg, #FFA229 0%, #1C4670 84.9%);
+
+    }
+  }
+}
+
+
+
 /* --- footer ---- */
 .section_footer {
   background: var(--blue-bg);
@@ -5,6 +90,7 @@
   & .row {
     row-gap: 30px;
   }
+
   & h6 {
     font-family: var(--font-primary);
     font-size: var(--fs-16);
@@ -30,6 +116,7 @@
 
   ul li {
     margin-bottom: 12px;
+
     a {
       color: var(--white-color);
     }

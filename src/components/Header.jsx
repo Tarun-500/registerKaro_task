@@ -18,23 +18,17 @@ export default function Header() {
     const toggleMenu = () => setIsOpen(!isOpen);
     const toggleSearch = () => setSearchOpen(!searchOpen);
 
-
-
-
     return (
         <header>
             <div className="header_top_bar">
-
                 <span>
                     <img src={EmailIcon} alt="Email icon" />
                     www.registerkaro.in
                 </span>
-
                 <span>
                     <img src={PhoneIcon} alt="phone icon" />
                     +918447746183
                 </span>
-
                 <span>
                     <Link to=''>   <img src={InstaIcon} alt="Instagram icon" /></Link>
                     <Link to=''>  <img src={FbIcon} alt="Facebook icon" /></Link>
@@ -43,8 +37,8 @@ export default function Header() {
                 </span>
             </div>
             <div className="header-section">
-                <Navbar color="light" light expand="md" className="px-3">
-                    <NavbarBrand href="/">
+                <Navbar  expand="md" className="w-100">
+                    <NavbarBrand href="/" >
                         <img src="/path-to-logo.png" alt="Logo" className="logo" />
                     </NavbarBrand>
                     <Button className="d-md-none" color="link" onClick={toggleSearch}>

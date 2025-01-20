@@ -14,7 +14,7 @@ import AppSection from './components/AppSection';
 import HappyClients from './components/HappyClient';
 import FAQAccordion from './components/FaqAccordian';
 import TestimonialSlider from './components/Testimonial';
-import BlogSection from './BlogSection';
+import BlogSection from './components/BlogSection';
 import StepSection from './components/StepSection';
 import VideoSection from './components/VideoSection';
 import WhyChooseSection from './components/WhyChooseSection';

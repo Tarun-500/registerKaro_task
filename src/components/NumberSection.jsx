@@ -3,43 +3,33 @@ import { Container, Row, Col } from "reactstrap";
 import styled from "styled-components";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Heading from "../UI_components/Heading";
 
-// Styled Components
+
 const StatsSection = styled.section`
   background-color: #fff;
-  padding: 50px 20px;
+  padding: 50px 20px 80px 20px;
   text-align: center;
-
-  .section-title {
-    color: #a15b2c;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    background: linear-gradient(90deg, #ffa229, #1c4670);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
+ 
   .stat-item {
-    margin-bottom: 30px;
+    margin-top: 50px;
 
     .stat-number {
       font-size: 2.5rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #ffa229, #1c4670);
+      font-weight: bold; 
+      background: linear-gradient(151.01deg, #FFA229 10%, #1C4670 68%);
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
-    }
 
+      
+    }
+ &:nth-child(2) .stat-number{
+      background: linear-gradient(152.74deg, #F53843 10%, #2F5795 68%) ;
+     -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
     .stat-label {
       font-size: 0.9rem;
       font-weight: 500;
@@ -59,26 +49,24 @@ const NumberSection = () => {
     { number: "41+", label: "Awards Received" },
   ];
 
-  // Initialize AOS animations
+
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      offset: 50, // Trigger animation when 50px in viewport
+      duration: 1000,
+      offset: 50,
     });
   }, []);
 
   return (
     <StatsSection>
       <Container>
-        {/* Animated Section Title */}
-        <div className="section-title" data-aos="fade-up">
-          WHY REGISTER KARO
-        </div>
 
-        {/* Animated Heading */}
-        <h2 data-aos="fade-up" data-aos-delay="200">
-          Some Numbers are Important
-        </h2>
+        <Heading data-aos="fade-up" data-aos-delay="200"
+          subheading={"WHY REGISTER KARO"}
+          subHeadingColor={"var(--primary-color)"}
+          mainHeading={"Some Numbers are important"}
+          mainHeadingColor={"var(--blue-color)"}
+        />
 
         <Row>
           {statsData.map((stat, index) => (
@@ -91,10 +79,8 @@ const NumberSection = () => {
               data-aos="zoom-in"
               data-aos-delay={index * 200}
             >
-              {/* Numbers */}
               <div className="stat-number">{stat.number}</div>
-              {/* Labels */}
-              <div className="stat-label">{stat.label}</div>
+              <div className="para-1 text-dark">{stat.label}</div>
             </Col>
           ))}
         </Row>

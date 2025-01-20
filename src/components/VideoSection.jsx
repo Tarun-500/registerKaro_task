@@ -7,7 +7,7 @@ const VideoSection = () => {
     <div style={{ backgroundColor: "#1a3b5d", color: "white", padding: "4rem 0" }}>
       <Container>
         <Row className="align-items-center">
-          {/* Text Section */}
+  
           <Col md="6" className="mb-4 mb-md-0">
             <h2>Our Video Introductions</h2>
             <p className="text-muted" style={{ color: "#d9d9d9" }}>
@@ -27,7 +27,7 @@ const VideoSection = () => {
               <div className="d-flex align-items-start">
                 {"Icon"}
                 <div>
-                  <h5 className="mb-1">Bring those ideas to life</h5>
+                  <h5 className=" ">Bring those ideas to life</h5>
                   <p className="mb-0 text-muted" style={{ color: "#d9d9d9" }}>
                     Engage audience segments and finally create actionable insights. Amplify vertical integration.
                   </p>
@@ -35,8 +35,7 @@ const VideoSection = () => {
               </div>
             </div>
           </Col>
-
-          {/* Video Section */}
+ 
           <Col md="6">
             <div className="position-relative">
               <img
