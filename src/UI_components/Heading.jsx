@@ -8,7 +8,7 @@ const HeaderContainer = styled.div`
 
 
 const Subheading = styled.div`  
-color: ${({ subHeadingColor }) => subHeadingColor || 'var(--blue-color)'};
+color: ${({ subheadingcolor }) => subheadingcolor || 'var(--blue-color)'};
 margin-bottom: 8px;
 font-size: var(--fs-14);
 font-weight: var(--fw-600);
@@ -22,7 +22,7 @@ font-size: var(--fs-12);
 `;
 
 const MainHeading = styled.h1` 
-color: ${({ mainHeadingColor }) => mainHeadingColor || 'var(--blue-color)'};
+color: ${({ mainheadingcolor }) => mainheadingcolor || 'var(--blue-color)'};
 font-size: var(--fs-32);
 font-weight:  var(--fw-700);
 line-height: 1.3;
@@ -37,16 +37,26 @@ font-size: var(--fs-24);
 const Heading = ({
     subheading,
     mainHeading,
-    subHeadingColor,
-    mainHeadingColor,
+    subheadingcolor,
+    mainheadingcolor,
     className,
     align = 'center',
 }) => {
     return (
         <HeaderContainer align={align} className={className}>
-            {subheading && <Subheading subHeadingColor={subHeadingColor}>{subheading}</Subheading>}
-            {mainHeading && <MainHeading mainHeadingColor={mainHeadingColor}>{mainHeading}</MainHeading>}
+            {subheading && (
+                <Subheading subheadingcolor={subheadingcolor}>
+                    {subheading}
+                </Subheading>
+            )}
+            {mainHeading && (
+                <MainHeading
+                    mainheadingcolor={mainheadingcolor}
+                    dangerouslySetInnerHTML={{ __html: mainHeading }}
+                />
+            )}
         </HeaderContainer>
+
     );
 };
 

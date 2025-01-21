@@ -1,11 +1,12 @@
 import { Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import BannerImg from "../assets/images/banner.png";
+import BannerSide from "../assets/images/banner_side.png";
 const Banner = () => {
   return (
-    <div className="banner-section">
-      <Container className="py-5">
-        <Row className="align-items-center">
+    <section className="section_banner">
+      <Container fluid>
+        <Row>
           <Col lg={6} md={6} sm={12} className="text-section">
             <div>
               <h1>Your trusted partner for compliance business needs</h1>
@@ -32,16 +33,21 @@ const Banner = () => {
                 <Button color="primary" className="me-2">
                   Talk An Expert
                 </Button>
-                <Link to="/how-it-works" className="btn btn-outline-secondary">
+                <Link to="" className="btn">
                   See how it works
                 </Link>
               </div>
             </div>
           </Col>
           <Col lg={6} md={6} sm={12} className="image-section">
-            <div>
+            <div className="d-flex align-itmes-baseline">
               <img
-                src="/path-to-your-image.png"
+                src={BannerImg}
+                alt="Business Compliance"
+                className="img-fluid"
+              />
+              <img
+                src={BannerSide}
                 alt="Business Compliance"
                 className="img-fluid"
               />
@@ -63,7 +69,7 @@ const Banner = () => {
           Tax Filing
         </Link>
       </div> */}
-    </div>
+    </section>
   );
 };
 

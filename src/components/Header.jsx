@@ -5,7 +5,7 @@ import InstaIcon from "../assets/images/icons/insta.svg";
 import FbIcon from "../assets/images/icons/fb.svg";
 import TwitterIcon from "../assets/images/icons/twiter.svg";
 import PintrestIcon from "../assets/images/icons/pintrest.svg";
-
+import Logo from "../assets/images/Logo_christmas.png";
 
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button, Collapse, Modal, ModalBody, Input } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -22,12 +22,12 @@ export default function Header() {
         <header>
             <div className="header_top_bar">
                 <span>
-                    <img src={EmailIcon} alt="Email icon" />
-                    www.registerkaro.in
+                    <img src={EmailIcon} alt="Email icon" loading="lazy" />
+                   <span className="d-none d-sm-block">  www.registerkaro.in </span>
                 </span>
                 <span>
                     <img src={PhoneIcon} alt="phone icon" />
-                    +918447746183
+                    <span className="d-none d-sm-block">  +918447746183 </span>
                 </span>
                 <span>
                     <Link to=''>   <img src={InstaIcon} alt="Instagram icon" /></Link>
@@ -37,9 +37,9 @@ export default function Header() {
                 </span>
             </div>
             <div className="header-section">
-                <Navbar  expand="md" className="w-100">
+                <Navbar expand="md" className="w-100">
                     <NavbarBrand href="/" >
-                        <img src="/path-to-logo.png" alt="Logo" className="logo" />
+                        <img src={Logo} alt="Logo" className="logo" />
                     </NavbarBrand>
                     <Button className="d-md-none" color="link" onClick={toggleSearch}>
                         <i className="fas fa-search"></i>

@@ -75,11 +75,11 @@ const Subscription = () => {
               subheading="1% OF THE INDUSTRY"
               mainHeading="Welcome to your new digital reality. Now."
               align="center"
-              subHeadingColor={"var(--white-color)"}
-              mainHeadingColor={"var(--white-color)"}
+              subheadingcolor={"var(--white-color)"}
+              mainheadingcolor={"var(--white-color)"}
             />
 
-            <Form inline className="form-container">
+            <Form inline={"true"} className="form-container">
               <Input
                 type="email"
                 placeholder="Enter Your Email"

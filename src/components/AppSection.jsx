@@ -115,7 +115,7 @@ const AppSection = () => {
             <StyledRightBox>
               <Heading
                 mainHeading={"Manage Your Services by your Mobile Phone"}
-                mainHeadingColor={"var(--white-color)"}
+                mainheadingcolor={"var(--white-color)"}
                 align={"left"}
               />
               <StyledParagraph className="para-1 light-text">
@@ -166,6 +166,7 @@ const AppSection = () => {
                 <img
                   src={MobileImg1}
                   alt="Mobile App"
+                   loading="lazy"
                 />
               </div>
 
@@ -175,6 +176,7 @@ const AppSection = () => {
                 <img
                   src={MobileImg2}
                   alt="Mobile App"
+                   loading="lazy"
                 />
               </div>
             </StyledImgDiv>

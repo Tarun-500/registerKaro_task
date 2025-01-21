@@ -21,10 +21,10 @@ const HappyClient = () => {
     ];
 
     // Load logo images
-    const logoImages = logos.map((logo) => {
+    const logoImages = logos.map((logo, index) => {
       const img = new Image();
       img.src = logo.src;
-      return { ...logo, img };
+      return { ...logo, img, key: `logo-${index}` };
     });
 
     // Create particles

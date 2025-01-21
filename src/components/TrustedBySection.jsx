@@ -61,6 +61,7 @@ const TrustedBySection = () => {
                                         src={logo.src}
                                         alt={logo.alt}
                                         style={{ width: "138px", margin: "0 auto" }}
+                                         loading="lazy"
                                     />
                                 </div>
                             ))}

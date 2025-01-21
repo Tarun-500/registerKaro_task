@@ -26,9 +26,9 @@ const FAQAccordion = () => {
 
         <Heading
           subheading={"FAQ"}
-          subHeadingColor={"var(--primary-color);"}
+          subheadingcolor={"var(--primary-color);"}
           mainHeading={"Frequent Ask Questions"}
-          mainHeadingColor={"var(--text-dark-1)"}
+          mainheadingcolor={"var(--text-dark-1)"}
           align="center"
         />
 

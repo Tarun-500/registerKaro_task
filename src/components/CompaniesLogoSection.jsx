@@ -57,6 +57,7 @@ const CompaniesLogoSection = () => {
                             {logos.map((logo, index) => (
                                 <div key={index}>
                                     <img
+                                     loading="lazy"
                                         src={logo.src}
                                         alt={logo.alt}
                                         style={{ width: "auto", height:"48px", margin: "0 auto" }}

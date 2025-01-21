@@ -63,9 +63,9 @@ const NumberSection = () => {
 
         <Heading data-aos="fade-up" data-aos-delay="200"
           subheading={"WHY REGISTER KARO"}
-          subHeadingColor={"var(--primary-color)"}
+          subheadingcolor={"var(--primary-color)"}
           mainHeading={"Some Numbers are important"}
-          mainHeadingColor={"var(--blue-color)"}
+          mainheadingcolor={"var(--blue-color)"}
         />
 
         <Row>

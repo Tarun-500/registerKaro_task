@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   background-color: ${(props) =>
     props.color || "var(--primary-color)"};  
   color: ${(props) =>
-    props.textColor || "var(--white-color)"}; 
+    props.textcolor || "var(--white-color)"}; 
   padding: ${(props) =>
     props.size === "small"
       ? "8px 12px"
@@ -17,6 +17,8 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 8px;
   display: inline-flex;
+  font-weight: ${(props) =>
+    props.fw || "400"}; 
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -37,18 +39,20 @@ const StyledButton = styled.button`
 const Button = ({
   text,
   color,
-  textColor,
+  textcolor,
   icon = null,
   onClick,
   size = "medium",
   disabled = false,
+  fw = 400,
   className,
 }) => {
   return (
     <StyledButton
       color={color}
-      textColor={textColor}
+      textcolor={textcolor}
       size={size}
+      fw={fw}
       onClick={onClick}
       disabled={disabled}
       className={className}

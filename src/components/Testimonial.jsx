@@ -66,7 +66,7 @@ const TestimonialSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500, 
+    speed: 500,
     slidesToShow: 2.5,
     slidesToScroll: 1,
     centerMode: true,
@@ -76,20 +76,33 @@ const TestimonialSlider = () => {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1200,
-        settings: { 
-          slidesToShow: 1.5,
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 1.2,
         },
       },
       {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1.2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
         breakpoint: 576,
         settings: {
+          dots: false,
           slidesToShow: 1,
         },
       },
@@ -98,15 +111,15 @@ const TestimonialSlider = () => {
 
   return (
     <section className="section_testimonial bg-blue section-space">
-    
+
       <div className="testimonial-container">
-     <div className="mb-4 ">
-     <Heading 
-       mainHeading={"What peoples says about us"}
-       mainHeadingColor={"var(--white-color)"}
-       align="left"
-       />
-      </div>
+        <div className="mb-4 ">
+          <Heading
+            mainHeading={"What peoples says about us"}
+            mainheadingcolor={"var(--white-color)"}
+            align="left"
+          />
+        </div>
 
 
         <Slider {...settings}>
@@ -129,6 +142,7 @@ const TestimonialSlider = () => {
                   className="testimonial-avatar"
                   src={testimonial.image}
                   alt={testimonial.name}
+                   loading="lazy"
                 />
                 <div>
                   <h4 className="testimonial-name">{testimonial.name}</h4>

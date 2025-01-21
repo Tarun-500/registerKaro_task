@@ -8,12 +8,19 @@
   /* colors */
   --blue-color: #1c4670;
   --blue-bg: #011b5b;
+  --blue-color-1: #001038;
   --text-color: #272d37;
   --text-color-light: #666666;
   --white-color: #fff;
   --text-light: #aab5cd;
   --text-dark-1: #3c2109;
+  --text-dark-2: #1A1A1A;
   --text-light-1: #d9d9d9;
+  --text-light-2: #667085;
+  --text-light-3: #0D1216;
+  --text-light-4: #FAFAFA;
+  --text-light-5: #282728;
+  --text-light-6: #E5E2DF;
   --black: #000;
   --text-dark: #181617;
   --brown-color: #bb162b;
@@ -21,24 +28,22 @@
   --green-color: #a5c937;
   --gradient-color: linear-gradient(96.22deg, #ffa229 9%, #1c4670 59.37%);
   --gradient-color-3: linear-gradient(180deg, #ffa229 0%, #1c4670 78.12%);
-  --gradient-color-2: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0) 0%,
-    #d0d0d0 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  --gradient-border: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0) 0%,
-    #d0d0d0 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  --gradient-color-2: linear-gradient(0deg,
+      rgba(0, 0, 0, 0) 0%,
+      #d0d0d0 50%,
+      rgba(0, 0, 0, 0) 100%);
+  --gradient-border: linear-gradient(0deg,
+      rgba(0, 0, 0, 0) 0%,
+      #d0d0d0 50%,
+      rgba(0, 0, 0, 0) 100%);
 
   /* Font weight */
+  --fw-800: 800;
   --fw-700: 700;
   --fw-500: 500;
   --fw-600: 600;
   --fw-400: 400;
+  --fw-300: 300;
 
   /* Font family */
   --font-primary: "Inter", sans-serif;
@@ -50,7 +55,9 @@
   --fs-14: 14px;
   --fs-15: 15px;
   --fs-16: 16px;
+  --fs-17: 17px;
   --fs-18: 18px;
+  --fs-20: 20px;
   --fs-22: 22px;
   --fs-24: 24px;
   --fs-32: 32px;
@@ -119,6 +126,21 @@ a {
   letter-spacing: -0.01em;
 }
 
+.para-5 {
+  font-family: var(--font-primary);
+  font-size: var(--fs-17);
+  font-weight: var(--fw-300);
+  line-height: 1.5;
+}
+
+.para-4 {
+  font-family: var(--font-primary);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
 .para-3 {
   font-family: var(--font-primary);
   font-size: var(--fs-18);
@@ -128,10 +150,18 @@ a {
 
 .head-2 {
   font-family: var(--font-primary);
-  font-size: 22px;
-  font-weight: 700;
+  font-size: var(--fs-22);
+  font-weight: var(--fw-700);
   line-height: 1.2;
 }
+
+.head-4 {
+  font-family: var(--font-primary);
+  font-size: var(--fs-20);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
 .head-5 {
   font-family: var(--font-primary);
   font-size: var(--fs-22);
@@ -144,6 +174,7 @@ a {
   color: var(--white-color);
   background-color: var(--primary-color);
 }
+
 .circle-btn {
   font-size: var(--fs-24);
   cursor: pointer;
@@ -154,6 +185,7 @@ a {
   place-items: center;
   flex: none;
 }
+
 .btn-green {
   width: 150px;
   height: 58px;
@@ -217,7 +249,7 @@ header {
     justify-content: end;
     gap: 24px;
 
-    span {
+    >span {
       font-family: var(--font-primary);
       font-size: var(--fs-14);
       font-weight: var(--fw-400);
@@ -304,7 +336,7 @@ header {
   }
 }
 
-/* ----- app section --- */
+
 
 /* --- accordion ---- */
 .faq-item {
@@ -341,7 +373,6 @@ header {
   text-align: left;
 }
 
-/* Show More Button */
 .faq-show-more {
   margin-top: 20px;
   padding: 10px 20px;
@@ -360,10 +391,11 @@ header {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .section-space{
+  .section-space {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .faq-container {
     padding: 10px;
   }
@@ -384,22 +416,12 @@ header {
   .head-5 {
     font-size: var(--fs-18);
   }
+
   .circle-btn {
     width: 40px;
     height: 40px;
     font-size: var(--fs-16);
   }
-}
-
-/* ----- blog section ------ */
-
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 /* -------- why choose section --------- */
@@ -410,13 +432,7 @@ header {
     text-align: center;
   }
 
-  /* Section Title & Subtitle */
-  .section-subtitle {
-    color: #f39c12;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+
 
   .section-title {
     font-weight: bold;
@@ -510,51 +526,99 @@ header {
   }
 }
 
-/* -------- banner section ------------ */
-.banner-section {
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  position: relative;
+
+/* -------------- ui comopnet ------- */
+.blogCard {
+  border-radius: 0;
+  border: none;
+  transition: transform 0.3s;
+  font-family: var(--font-primary);
+
+  .imgBox {
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-body {
+    padding: 32px 0 20px 0;
+
+    .author-text {
+      font-size: var(--fs-14);
+      font-weight: var(--fw-600);
+      line-height: 1.3;
+      text-align: left;
+      color: var(--text-light-2);
+      padding-bottom: 12px;
+      display: block;
+    }
+
+    h5 {
+      color: var(--text-dark-2);
+    }
+
+    .ext-link {
+      transform: rotate(-45deg);
+      color: var(--text-dark-2);
+    }
+
+    .para-4 {
+      margin: 12px 0 24px 0;
+      color: var(--text-light-2);
+    }
+
+    .badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge {
+      font-size: var(--fs-14);
+      font-weight: var(--fw-500);
+      line-height: 1.3;
+      text-align: center;
+      padding: 2px 10px 2px 10px;
+      gap: 0px;
+      border-radius: 16px;
+    }
+
+    .badge-purple {
+      background-color: #F9F5FF;
+      color: #6941C6;
+    }
+
+    .badge-blue {
+      background-color: #EEF4FF;
+      color: #3538CD;
+    }
+
+    .badge-green {
+      background-color: #ECFDF3;
+      color: #027A48;
+    }
+
+    .badge-red {
+      background-color: #FDF2FA;
+      color: #C11574;
+    }
+  }
+
+
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
 }
 
-.text-section h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
 
-.text-section p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.stats {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.stats div {
-  text-align: center;
-}
-
-.image-section img {
-  max-width: 100%;
-  height: auto;
-}
-
-.vertical-buttons {
-  /* position: fixed; */
-  bottom: 20px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.vertical-buttons .btn {
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
 
 @media (max-width: 768px) {
   .vertical-buttons {
@@ -622,11 +686,13 @@ header {
 .slick-dots li {
   margin: 0 !important;
 }
+
 .slick-dots li button:before {
   font-size: 8px !important;
   color: var(--text-light-1) !important;
   opacity: 1 !important;
 }
+
 .slick-dots li.slick-active button:before {
   opacity: 1 !important;
   color: var(--primary-color) !important;

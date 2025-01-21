@@ -13,7 +13,7 @@ const VideoSection = () => {
           <Col md="6">
             <Heading
               mainHeading={"Our Video Introductions"}
-              mainHeadingColor={"var(--white-color)"}
+              mainheadingcolor={"var(--white-color)"}
               align="left"
             />
 
@@ -53,13 +53,8 @@ const VideoSection = () => {
                 src={YoutubeImg}
                 alt="Video Thumbnail"
                 className="img-fluid rounded shadow"
-              />
-              {/* <Button 
-                className="position-absolute top-50 start-50 translate-middle"
-                style={{ borderRadius: "50%", padding: "1rem" }}
-              >
-                <i className="bi bi-play-fill" style={{ fontSize: "2rem" }}></i>
-              </Button> */}
+                 loading="lazy"
+              /> 
             </div>
           </Col>
         </Row>
