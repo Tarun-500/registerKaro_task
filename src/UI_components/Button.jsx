@@ -1,6 +1,4 @@
 import styled from "styled-components";
-
-// Styled Button Component
 const StyledButton = styled.button`
   background-color: ${(props) =>
     props.color || "var(--primary-color)"};  
@@ -45,6 +43,7 @@ const Button = ({
   size = "medium",
   disabled = false,
   fw = 400,
+  previcon,
   className,
 }) => {
   return (
@@ -57,6 +56,7 @@ const Button = ({
       disabled={disabled}
       className={className}
     >
+       {previcon && <span className="button-          ">{previcon}</span>}
       {text}
       {icon && <span className="button-icon">{icon}</span>}
 

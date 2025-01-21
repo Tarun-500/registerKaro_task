@@ -15,6 +15,7 @@
   --text-light: #aab5cd;
   --text-dark-1: #3c2109;
   --text-dark-2: #1A1A1A;
+  --text-dark-3: #282828;
   --text-light-1: #d9d9d9;
   --text-light-2: #667085;
   --text-light-3: #0D1216;
@@ -292,12 +293,11 @@ header {
     }
   }
 
-  .header-section {
-    border-bottom: 1px solid #ebebeb;
+  .header-section { 
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #fff;
+    background-color:transparent;
   }
 
   .logo {
@@ -309,15 +309,7 @@ header {
     margin-right: 1rem;
     font-weight: 500;
   }
-
-  .navbar-nav .btn {
-    font-weight: bold;
-  }
-
-  .search-modal {
-    top: 30%;
-  }
-
+ 
   @media (max-width: 768px) {
     .navbar-nav {
       flex-direction: column;
@@ -674,7 +666,11 @@ header {
         }
       }
     }
+    .logo {
+      max-height: 40px;
+    }
   }
+
 }
 
 /* -------- bootstrap classes ---------- */
