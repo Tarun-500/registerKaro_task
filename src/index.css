@@ -16,6 +16,7 @@
   --text-dark-1: #3c2109;
   --text-dark-2: #1a1a1a;
   --text-dark-3: #282828;
+  --text-dark-4: #4F4F4F;
   --text-light-1: #d9d9d9;
   --text-light-2: #667085;
   --text-light-3: #0d1216;
@@ -54,8 +55,10 @@
   /* Font family */
   --font-primary: "Inter", sans-serif;
   --font-Poppins: "Poppins", sans-serif;
+  --font-Lato: "Lato", sans-serif;
 
   /* font size */
+  --fs-10: 10px;
   --fs-11: 11px;
   --fs-12: 12px;
   --fs-14: 14px;
@@ -172,7 +175,7 @@ a {
 .head-4 {
   font-family: var(--font-primary);
   font-size: var(--fs-20);
-  font-weight: 800;
+  font-weight: var(--fw-800);
   line-height: 1.1;
 }
 
@@ -688,11 +691,11 @@ header {
 
 /* ---------- slider css ---------- */
 .slick-dots li {
-  margin: 0 !important;
+  margin: 0 3px !important;
 }
 
 .slick-dots li button:before {
-  font-size: 8px !important;
+  font-size: var(--fs-10) !important;
   color: var(--text-light-1) !important;
   opacity: 1 !important;
 }

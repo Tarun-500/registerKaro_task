@@ -1,10 +1,11 @@
-import {Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import BannerImg from "../assets/images/banner.webp";
 import BannerSide from "../assets/images/banner_side.webp";
-import { FaCirclePlay } from "react-icons/fa6";
 import Button from '../UI_components/Button'
 import StarIcon from '../assets/images/icons/star.svg'
 import StarIcon2 from '../assets/images/icons/star_square.svg'
+import { FinancialStabilityIcon, ClientsIcon, CustomerRatingIcon, PlayIcon } from "../data/icons"
+import { Link } from "react-router-dom"
 const Banner = () => {
   return (
     <section className="section_banner">
@@ -27,21 +28,37 @@ const Banner = () => {
               </p>
               <div className="stars">
                 <div>
-                  <h4>4.5+</h4>
-                  <p>Customer Rating</p>
+                  <div>
+                    <CustomerRatingIcon />
+                  </div>
+                  <div>
+                    <h5>4.5+</h5>
+                    <p>Customer Rating</p>
+                  </div>
+                </div>
+
+                <div>
+                  <div>
+                    <ClientsIcon />
+                  </div>
+                  <div>
+                    <h5>20,000+</h5>
+                    <p>Clients</p>
+                  </div>
                 </div>
                 <div>
-                  <h4>20,000+</h4>
-                  <p>Clients</p>
-                </div>
-                <div>
-                  <h4>99.8%</h4>
-                  <p>Financial Stability</p>
+                  <div>
+                    <FinancialStabilityIcon />
+                  </div>
+                  <div>
+                    <h5>99.8%</h5>
+                    <p>Financial Stability</p>
+                  </div>
                 </div>
               </div>
               <div className="">
                 <Button color={"var(--blue-color)"} text={"Talk An Expert"} />
-                <Button text="See how it works" color="transparent" textcolor={"var(--text-dark-3)"} previcon={<FaCirclePlay />} />
+                <Button text="See how it works" color="transparent" textcolor={"var(--text-dark-3)"} previcon={<PlayIcon />} />
               </div>
             </div>
           </Col>
@@ -57,11 +74,16 @@ const Banner = () => {
                 alt="Business Compliance"
                 className="img-fluid"
               />
+
+
+
             </div>
+
           </Col>
         </Row>
       </Container>
-      {/* <div className="vertical-buttons">
+
+      <div className="vertical-buttons">
         <Link to="/annual-compliance" className="btn btn-light">
           Annual Compliance
         </Link>
@@ -71,10 +93,10 @@ const Banner = () => {
         <Link to="/company-formation" className="btn btn-light">
           Company Formation
         </Link>
-        <Link to="/tax-filing" className="btn btn-light">
-          Tax Filing
+        <Link to="/annual-compliance" className="btn btn-light">
+          Annual Compliance
         </Link>
-      </div> */}
+      </div>
     </section>
   );
 };

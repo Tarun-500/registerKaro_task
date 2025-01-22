@@ -9,7 +9,7 @@ import Logo from "../assets/images/Logo_christmas.png";
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Collapse, Modal, ModalBody, Input } from "reactstrap";
 import { Link } from "react-router-dom";
 import Button from "../UI_components/Button";
-import { FiSearch } from "react-icons/fi";
+import { SearchIcon } from "../data/icons";
 import { RiMenu3Line } from "react-icons/ri";
 
 export default function Header() {
@@ -44,8 +44,8 @@ export default function Header() {
                         <img src={Logo} alt="Logo" className="logo" />
                     </NavbarBrand>
                     <div className="d-lg-none">
-                        <Button color={"transparent"} arialabel={"search button"}  textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleSearch} icon={<FiSearch />} />
-                        <Button color={"transparent"}  arialabel={"menu button"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleMenu} icon={<RiMenu3Line />} />
+                        <Button color={"transparent"} arialabel={"search button"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleSearch} icon={<SearchIcon />} />
+                        <Button color={"transparent"} arialabel={"menu button"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleMenu} icon={<RiMenu3Line />} />
                     </div>
 
                     <Collapse isOpen={isOpen} navbar className="d-lg-flex justify-content-end">
@@ -66,7 +66,7 @@ export default function Header() {
                                 <NavLink href="/about">About Us</NavLink>
                             </NavItem>
                             <NavItem className="d-none d-md-block">
-                                <Button color={"transparent"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleSearch} icon={<FiSearch />} />
+                                <Button color={"transparent"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleSearch} icon={<SearchIcon />} />
                             </NavItem>
                             <NavItem>
                                 <Button color={"var(--primary-color)"} fw={"var(--fw-700)"} textcolor={"var(--white-color)"} text={"Talk An Expert"} />

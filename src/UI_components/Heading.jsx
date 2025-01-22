@@ -1,37 +1,34 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.div`
-  text-align: ${({ align }) => align || 'center'};  
+  text-align: ${({ $align }) => $align || 'center'};  
   font-family: var(--font-primary); 
 `;
 
-
 const Subheading = styled.div`  
-color: ${({ subheadingcolor }) => subheadingcolor || 'var(--blue-color)'};
-margin-bottom: 8px;
-font-size: var(--fs-14);
-font-weight: var(--fw-600);
-line-height: 1.5;
-letter-spacing: -0.2px; 
+  color: ${({ $subheadingcolor }) => $subheadingcolor || 'var(--blue-color)'};
+  margin-bottom: 8px;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+  line-height: 1.5;
+  letter-spacing: -0.2px; 
 
-@media(max-width: 991px){
-font-size: var(--fs-12);
-}
-
+  @media(max-width: 991px) {
+    font-size: var(--fs-12);
+  }
 `;
 
 const MainHeading = styled.h1` 
-color: ${({ mainheadingcolor }) => mainheadingcolor || 'var(--blue-color)'};
-font-size: var(--fs-32);
-font-weight:  var(--fw-700);
-line-height: 1.3;
-letter-spacing: -0.015em; 
-margin:0;
-@media(max-width: 991px){
-font-size: var(--fs-24);
-} 
+  color: ${({ $mainheadingcolor }) => $mainheadingcolor || 'var(--blue-color)'};
+  font-size: var(--fs-32);
+  font-weight: var(--fw-700);
+  line-height: 1.3;
+  letter-spacing: -0.015em; 
+  margin: 0;
 
+  @media(max-width: 991px) {
+    font-size: var(--fs-24);
+  } 
 `;
 
 const Heading = ({
@@ -43,15 +40,16 @@ const Heading = ({
     align = 'center',
 }) => {
     return (
-        <HeaderContainer align={align} className={className}>
+        <HeaderContainer $align={align} className={className}>
             {subheading && (
-                <Subheading subheadingcolor={subheadingcolor}>
+                <Subheading
+                    $subheadingcolor={subheadingcolor}>
                     {subheading}
                 </Subheading>
             )}
             {mainHeading && (
                 <MainHeading
-                    mainheadingcolor={mainheadingcolor}
+                    $mainheadingcolor={mainheadingcolor}
                     dangerouslySetInnerHTML={{ __html: mainHeading }}
                 />
             )}

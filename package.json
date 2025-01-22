@@ -19,6 +19,7 @@
     "@react-three/drei": "^9.121.2",
     "@react-three/fiber": "^8.17.12",
     "@smastrom/react-rating": "^1.5.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.18.1",
@@ -35,7 +36,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.14",
     "three": "^0.172.0",
-    "tsparticles": "^3.7.1"
+    "tsparticles": "^3.7.1",
+    "typeface-lato": "^1.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
