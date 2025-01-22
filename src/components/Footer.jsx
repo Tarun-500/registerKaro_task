@@ -19,16 +19,16 @@ const Footer = () => {
                 Design outstanding interfaces with advanced Figma features in a matter of minutes.
               </p>
               <div className="icons">
-                <Link to="https://facebook.com" target="_blank" rel="noreferrer">
+                <Link to="https://facebook.com"  target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-facebook"></i>
                 </Link>
-                <Link to="https://google.com" target="_blank" rel="noreferrer">
+                <Link to="https://google.com" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-google"></i>
                 </Link>
-                <Link to="https://apple.com" target="_blank" rel="noreferrer">
+                <Link to="https://apple.com" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-apple"></i>
                 </Link>
-                <Link to="https://instagram.com" target="_blank" rel="noreferrer">
+                <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-instagram"></i>
                 </Link>
               </div>

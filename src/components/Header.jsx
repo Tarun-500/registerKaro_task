@@ -44,8 +44,8 @@ export default function Header() {
                         <img src={Logo} alt="Logo" className="logo" />
                     </NavbarBrand>
                     <div className="d-lg-none">
-                        <Button color={"transparent"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleSearch} icon={<FiSearch />} />
-                        <Button color={"transparent"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleMenu} icon={<RiMenu3Line />} />
+                        <Button color={"transparent"} arialabel={"search button"}  textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleSearch} icon={<FiSearch />} />
+                        <Button color={"transparent"}  arialabel={"menu button"} textcolor={"var(--blue-color)"} fs={"var(--fs-24px)"} onClick={toggleMenu} icon={<RiMenu3Line />} />
                     </div>
 
                     <Collapse isOpen={isOpen} navbar className="d-lg-flex justify-content-end">

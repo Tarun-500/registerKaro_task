@@ -14,7 +14,7 @@ const BlogCard = ({ blog }) => {
 
         <div className="d-flex aling-itmes-center justify-content-between">
           <h5 className="head-2 w-75 text-truncate">{blog.title} </h5>
-          <Link to="/" className="ext-link head-5" >   <FiArrowRight /> </Link>
+          <Link to="/" className="ext-link head-5" data-discover="true" aria-label="Discover More about our Blog">   <FiArrowRight /> </Link>
         </div>
         <p className="para-4"> {blog.description} </p>
         <div className="badges">
