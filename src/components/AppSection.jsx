@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import styled from "styled-components";
-import MobileImg1 from '../assets/images/mobile-1.png';
-import MobileImg2 from '../assets/images/mobile-2.png';
+import MobileImg1 from '../assets/images/mobile-1.webp';
+import MobileImg2 from '../assets/images/mobile-2.webp';
 import AOS from "aos";
 import { Link } from 'react-router-dom';
 import Heading from "../UI_components/Heading";

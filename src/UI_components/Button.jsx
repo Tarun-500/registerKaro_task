@@ -49,6 +49,7 @@ const Button = ({
   fw = 400,
   previcon,
   className,
+  arialabel
 }) => {
   return (
     <StyledButton
@@ -59,6 +60,7 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       className={className}
+      {...(arialabel && { 'aria-label': arialabel })}
     >
       {previcon && <span className="prev-icon">{previcon}</span>}
       {text}

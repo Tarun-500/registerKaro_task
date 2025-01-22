@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button } from "reactstrap";
-import YoutubeImg from "../assets/images/youtube_banner.png"
+import YoutubeImg from "../assets/images/youtube_banner.webp"
 import Heading from "../UI_components/Heading";
 import { IoMdFlashlight } from "react-icons/io";
 import { MdOutlineAutoGraph } from "react-icons/md";
