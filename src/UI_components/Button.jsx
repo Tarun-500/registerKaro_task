@@ -31,6 +31,10 @@ const StyledButton = styled.button`
     background-color: var(--text-color-light); 
     cursor: not-allowed;
   }
+
+  .prev-icon{
+  color:var(--brown-color-1)
+  }
 `;
 
 
@@ -56,7 +60,7 @@ const Button = ({
       disabled={disabled}
       className={className}
     >
-       {previcon && <span className="button-          ">{previcon}</span>}
+      {previcon && <span className="prev-icon">{previcon}</span>}
       {text}
       {icon && <span className="button-icon">{icon}</span>}
 

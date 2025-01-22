@@ -1,4 +1,4 @@
-import {Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import BannerImg from "../assets/images/banner.png";
 import BannerSide from "../assets/images/banner_side.png";
 import { FaCirclePlay } from "react-icons/fa6";
@@ -12,19 +12,20 @@ const Banner = () => {
         <Row>
           <Col lg={6} md={6} sm={12} className="text-section">
             <div>
-              <span> <img src={StarIcon} alt="star" /> Google Rating 
-             {
-              Array.from({ length: 5 }).map((_, index) => (
-                <img src={StarIcon2} alt="star" key={index} />
-              ))
-             }
-               </span>
-              <h1>Your trusted partner for compliance business needs</h1>
+              <span> <img src={StarIcon} alt="star" /> Google Rating
+                {
+                  Array.from({ length: 5 }).map((_, index) => (
+                    <img src={StarIcon2} alt="star" key={index} />
+                  ))
+                }
+              </span>
+              <h1>Your trusted partner <br /> for compliance business needs</h1>
+              <div className="line"></div>
               <p>
                 An online business compliance platform that helps entrepreneurs
                 and other individuals with various <strong> registrations, tax filings</strong>, and other <strong>legal matters</strong>.
               </p>
-              <div className="stats">
+              <div className="stars">
                 <div>
                   <h4>4.5+</h4>
                   <p>Customer Rating</p>
@@ -38,9 +39,9 @@ const Banner = () => {
                   <p>Financial Stability</p>
                 </div>
               </div>
-              <div className="cta-buttons mt-3">
-                <Button color={"var(--blue-color)"} text={"Talk An Expert"} /> 
-                <Button  text="See how it works" color="transparent" textcolor={"var(--text-dark-3)"} previcon={<FaCirclePlay />}  />
+              <div className="">
+                <Button color={"var(--blue-color)"} text={"Talk An Expert"} />
+                <Button text="See how it works" color="transparent" textcolor={"var(--text-dark-3)"} previcon={<FaCirclePlay />} />
               </div>
             </div>
           </Col>

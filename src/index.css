@@ -14,29 +14,34 @@
   --white-color: #fff;
   --text-light: #aab5cd;
   --text-dark-1: #3c2109;
-  --text-dark-2: #1A1A1A;
+  --text-dark-2: #1a1a1a;
   --text-dark-3: #282828;
   --text-light-1: #d9d9d9;
   --text-light-2: #667085;
-  --text-light-3: #0D1216;
-  --text-light-4: #FAFAFA;
+  --text-light-3: #0d1216;
+  --text-light-4: #fafafa;
   --text-light-5: #282728;
-  --text-light-6: #E5E2DF;
+  --text-light-6: #e5e2df;
   --black: #000;
   --text-dark: #181617;
   --brown-color: #bb162b;
+  --brown-color-1: #f60014;
   --primary-color: #ffa229;
   --green-color: #a5c937;
   --gradient-color: linear-gradient(96.22deg, #ffa229 9%, #1c4670 59.37%);
   --gradient-color-3: linear-gradient(180deg, #ffa229 0%, #1c4670 78.12%);
-  --gradient-color-2: linear-gradient(0deg,
-      rgba(0, 0, 0, 0) 0%,
-      #d0d0d0 50%,
-      rgba(0, 0, 0, 0) 100%);
-  --gradient-border: linear-gradient(0deg,
-      rgba(0, 0, 0, 0) 0%,
-      #d0d0d0 50%,
-      rgba(0, 0, 0, 0) 100%);
+  --gradient-color-2: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    #d0d0d0 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  --gradient-border: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    #d0d0d0 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   /* Font weight */
   --fw-800: 800;
@@ -62,6 +67,7 @@
   --fs-22: 22px;
   --fs-24: 24px;
   --fs-32: 32px;
+  --fs-48: 48px;
 
   /* --- radius --- */
   --rounded-10: 10px;
@@ -149,6 +155,13 @@ a {
   line-height: 1.5;
 }
 
+.head-1 {
+  font-family: var(--font-primary);
+  font-size: var(--fs-48);
+  font-weight: var(--fw-500);
+  line-height: 1.3;
+  letter-spacing: -1.5px;
+}
 .head-2 {
   font-family: var(--font-primary);
   font-size: var(--fs-22);
@@ -240,6 +253,13 @@ a {
   }
 }
 
+.line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--brown-color-1);
+  margin: 20px 0 25px 0;
+}
+
 /* ----- header  section 1 ----- */
 header {
   .header_top_bar {
@@ -250,7 +270,7 @@ header {
     justify-content: end;
     gap: 24px;
 
-    >span {
+    > span {
       font-family: var(--font-primary);
       font-size: var(--fs-14);
       font-weight: var(--fw-400);
@@ -293,11 +313,11 @@ header {
     }
   }
 
-  .header-section { 
+  .header-section {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color:transparent;
+    background-color: transparent;
   }
 
   .logo {
@@ -309,7 +329,7 @@ header {
     margin-right: 1rem;
     font-weight: 500;
   }
- 
+
   @media (max-width: 768px) {
     .navbar-nav {
       flex-direction: column;
@@ -327,8 +347,6 @@ header {
     margin-bottom: 40px;
   }
 }
-
-
 
 /* --- accordion ---- */
 .faq-item {
@@ -404,7 +422,6 @@ header {
     font-size: 12px;
   }
 
-
   .head-5 {
     font-size: var(--fs-18);
   }
@@ -423,8 +440,6 @@ header {
     padding: 40px 20px;
     text-align: center;
   }
-
-
 
   .section-title {
     font-weight: bold;
@@ -518,8 +533,7 @@ header {
   }
 }
 
-
-/* -------------- ui comopnet ------- */
+/* -------------- ui component  ------- */
 .blogCard {
   border-radius: 0;
   border: none;
@@ -582,35 +596,30 @@ header {
     }
 
     .badge-purple {
-      background-color: #F9F5FF;
-      color: #6941C6;
+      background-color: #f9f5ff;
+      color: #6941c6;
     }
 
     .badge-blue {
-      background-color: #EEF4FF;
-      color: #3538CD;
+      background-color: #eef4ff;
+      color: #3538cd;
     }
 
     .badge-green {
-      background-color: #ECFDF3;
-      color: #027A48;
+      background-color: #ecfdf3;
+      color: #027a48;
     }
 
     .badge-red {
-      background-color: #FDF2FA;
-      color: #C11574;
+      background-color: #fdf2fa;
+      color: #c11574;
     }
   }
-
-
 
   &:hover {
     transform: translateY(-5px);
   }
-
 }
-
-
 
 @media (max-width: 768px) {
   .vertical-buttons {
@@ -670,7 +679,6 @@ header {
       max-height: 40px;
     }
   }
-
 }
 
 /* -------- bootstrap classes ---------- */
