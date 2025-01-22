@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ProfileImg from "../assets/images/testimonial_img.png"
+import ProfileImg from "../assets/images/testimonial_img.webp"
 import QuoteIcon from '../assets/images/icons/quote.png'
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
 import Heading from "../UI_components/Heading";
@@ -142,7 +142,7 @@ const TestimonialSlider = () => {
                   className="testimonial-avatar"
                   src={testimonial.image}
                   alt={testimonial.name}
-                   loading="lazy"
+                  loading="lazy"
                 />
                 <div>
                   <h4 className="testimonial-name">{testimonial.name}</h4>

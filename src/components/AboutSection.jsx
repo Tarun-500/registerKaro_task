@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap";
 import Button from "../UI_components/Button";
-import AboutImg from "../assets/images/about_us.jpg"
+import AboutImg from "../assets/images/about_us.webp"
 import Heading from "../UI_components/Heading";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 

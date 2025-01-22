@@ -1,6 +1,6 @@
 import {Container, Row, Col } from "reactstrap";
-import BannerImg from "../assets/images/banner.png";
-import BannerSide from "../assets/images/banner_side.png";
+import BannerImg from "../assets/images/banner.webp";
+import BannerSide from "../assets/images/banner_side.webp";
 import { FaCirclePlay } from "react-icons/fa6";
 import Button from '../UI_components/Button'
 import StarIcon from '../assets/images/icons/star.svg'
