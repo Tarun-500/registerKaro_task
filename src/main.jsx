@@ -11,7 +11,7 @@ if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
       <App />
-    </StrictMode>
+    </StrictMode>,
   );
 } else {
   console.error("Root element not found. Please check your HTML file.");
