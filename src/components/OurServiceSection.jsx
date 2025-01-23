@@ -1,12 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-
-import Icon1 from "../assets/images/icons/our_service_1.svg"
-import Icon2 from "../assets/images/icons/our_service_2.svg"
-import Icon3 from "../assets/images/icons/our_service_3.svg"
-import Icon4 from "../assets/images/icons/our_service_4.svg"
-import Icon5 from "../assets/images/icons/our_service_5.svg"
-import Icon6 from "../assets/images/icons/our_service_6.svg"
+import { FormationServiceIcon, SecretarialServicesIcon, OfficeAddressServicesIcon, ComplianceServicesIcon, PayrollServicesIcon, BookkeepingServicesIcon } from '../data/icons'
 import Heading from "../UI_components/Heading";
 import Button from "../UI_components/Button";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
@@ -14,37 +8,37 @@ const services = [
   {
     title: "Company Formation",
     description: "Build web-based solutions that enhance customer experience.",
-    icon: Icon1,
+    icon: <FormationServiceIcon />,
     animation: "animate__fadeInLeft",
   },
   {
     title: "Company Secretarial Services",
     description: "Make data-driven decisions and utilize technology to reach business goals.",
-    icon: Icon2,
+    icon: <SecretarialServicesIcon />,
     animation: "animate__fadeInUp",
   },
   {
     title: "Virtual Office Address",
     description: "Foster customer relationships by effectively serving your market.",
-    icon: Icon3,
+    icon: <OfficeAddressServicesIcon/>,
     animation: "animate__fadeInRight",
   },
   {
     title: "Annual Compliance Services",
     description: "Turn your ideas into modern products with our design experts.",
-    icon: Icon4,
+    icon: <ComplianceServicesIcon />,
     animation: "animate__fadeInLeft",
   },
   {
     title: "Payroll Services",
     description: "Expand your business across the globe with minimal effort.",
-    icon: Icon5,
+    icon: <PayrollServicesIcon />,
     animation: "animate__fadeInUp",
   },
   {
     title: "Bookkeeping Services",
     description: "Steering user behaviours with creative design, data insights & technology.",
-    icon: Icon6,
+    icon: <BookkeepingServicesIcon />,
     animation: "animate__fadeInRight",
   },
 ];
@@ -75,7 +69,7 @@ const OurServiceSection = () => {
             >
               <div className="service-box">
                 <div className="service-icon">
-                  <img src={service.icon} alt={service.title} loading="lazy" />
+                  {service.icon}
                 </div>
                 <h5 className="head-4">{service.title}</h5>
                 <p className="para-5">{service.description}</p>
