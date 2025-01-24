@@ -11,7 +11,7 @@ const Banner = () => {
     <section className="section_banner">
       <Container fluid>
         <Row>
-          <Col lg={6} md={6} sm={12} className="text-section">
+          <Col lg={6} sm={12} className="text-section">
             <div>
               <span> <img src={StarIcon} alt="star" /> Google Rating
                 {
@@ -62,7 +62,7 @@ const Banner = () => {
               </div>
             </div>
           </Col>
-          <Col lg={6} md={6} sm={12} className="image-section mt-auto">
+          <Col lg={6} sm={12} className="image-section mt-auto">
             <div className="d-flex align-items-baseline">
               <img
                 src={BannerImg}
@@ -74,9 +74,6 @@ const Banner = () => {
                 alt="Business Compliance"
                 className="img-fluid"
               />
-
-
-
             </div>
 
           </Col>
@@ -89,7 +86,7 @@ const Banner = () => {
         </Link>
         <Link to="/payroll-services" className="btn btn-light">
           Payroll Services
-        </Link>
+          </Link>
         <Link to="/company-formation" className="btn btn-light">
           Company Formation
         </Link>

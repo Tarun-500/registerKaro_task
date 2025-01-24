@@ -1,12 +1,13 @@
 /* ---------- banner section ------------- */
-.section_banner {
+.section_banner { 
   font-family: var(--font-primary);
   background-image: url("../images/banner_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  position: relative;
+  position: relative; 
+
 
   .image-section {
     position: relative;
@@ -74,8 +75,9 @@
     flex-direction: column;
 
     a {
-      box-shadow: 0px 2px 4px 0px #00000002;
+      box-shadow: 0px 4px 10px 0px #00000052;
       font-size: var(--fs-14);
+      border: none;
       font-weight: var(--fw-500);
       padding: 12px 20px;
       border-radius: 10px 0 0 10px;
@@ -92,6 +94,13 @@
       }
     }
   }
+
+  @media(max-width:576px) {
+    .stars {
+      flex-wrap: wrap;
+    }
+  }
+
 }
 
 /* -------- our service section --------- */
@@ -289,7 +298,7 @@
   .custom-arrow {
     position: absolute;
     top: -50px;
-    z-index: 1000;
+    z-index: var(--z-index-99);
     transform: translateY(-50%);
     font-size: var(--fs-24);
     color: var(--blue-color);
@@ -500,14 +509,17 @@
   position: absolute;
   pointer-events: none;
   opacity: 0.9;
-  animation: move 20s linear infinite; /* Smooth infinite animation */
+  animation: move 20s linear infinite;
+  /* Smooth infinite animation */
 }
 
 @keyframes move {
   0% {
     transform: translateX(100vw) translateY(0);
   }
+
   100% {
-    transform: translateX(-100vw) translateY(30px); /* Adjust up and down motion */
+    transform: translateX(-100vw) translateY(30px);
+    /* Adjust up and down motion */
   }
 }

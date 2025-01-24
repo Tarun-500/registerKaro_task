@@ -31,18 +31,14 @@
   --green-color: #a5c937;
   --gradient-color: linear-gradient(96.22deg, #ffa229 9%, #1c4670 59.37%);
   --gradient-color-3: linear-gradient(180deg, #ffa229 0%, #1c4670 78.12%);
-  --gradient-color-2: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0) 0%,
-    #d0d0d0 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  --gradient-border: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0) 0%,
-    #d0d0d0 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  --gradient-color-2: linear-gradient(0deg,
+      rgba(0, 0, 0, 0) 0%,
+      #d0d0d0 50%,
+      rgba(0, 0, 0, 0) 100%);
+  --gradient-border: linear-gradient(0deg,
+      rgba(0, 0, 0, 0) 0%,
+      #d0d0d0 50%,
+      rgba(0, 0, 0, 0) 100%);
 
   /* Font weight */
   --fw-800: 800;
@@ -74,6 +70,11 @@
 
   /* --- radius --- */
   --rounded-10: 10px;
+
+  --z-index-9: 9;
+  --z-index-99: 99;
+  --z-index-999: 999;
+  --z-index-9999: 9999;
 }
 
 /* ---- common css ----- */
@@ -165,6 +166,7 @@ a {
   line-height: 1.3;
   letter-spacing: -1.5px;
 }
+
 .head-2 {
   font-family: var(--font-primary);
   font-size: var(--fs-22);
@@ -265,6 +267,11 @@ a {
 
 /* ----- header  section 1 ----- */
 header {
+  .container-fluid {
+    width: 100%;
+    max-width: 1920px !important;
+  }
+
   .header_top_bar {
     background-color: var(--blue-color);
     padding: 12px;
@@ -273,7 +280,7 @@ header {
     justify-content: end;
     gap: 24px;
 
-    > span {
+    >span {
       font-family: var(--font-primary);
       font-size: var(--fs-14);
       font-weight: var(--fw-400);
@@ -319,7 +326,7 @@ header {
   .header-section {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: var(--z-index-9999);
     background-color: transparent;
   }
 
@@ -333,6 +340,41 @@ header {
     font-weight: 500;
   }
 
+
+  .searchbox {
+    right: 0;
+    width: 320px;
+    position: absolute;
+    box-shadow: 0 0 100px 100vw #55555552;
+    z-index: var(--z-index-999);
+    top: calc(100% + 20px);
+    transform: translateX(50px);
+    border-radius: var(--rounded-10);
+
+    input {
+      padding: 12px 16px;
+      width: 100%;
+      border-radius: var(--rounded-10);
+      font-size: var(--fs-16);
+      border-color: var(--blue-color);
+
+      &:focus {
+        border-color: var(--primary-color);
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .searchbox {
+      width: 100%;
+      min-width: max-content;
+
+      input {
+        padding: 8px 16px;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     .navbar-nav {
       flex-direction: column;
@@ -343,6 +385,8 @@ header {
       margin-bottom: 0.5rem;
     }
   }
+
+
 }
 
 .section_trusted_by {
@@ -678,6 +722,7 @@ header {
         }
       }
     }
+
     .logo {
       max-height: 40px;
     }
