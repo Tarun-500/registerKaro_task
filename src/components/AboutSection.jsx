@@ -3,22 +3,23 @@ import Button from "../UI_components/Button";
 import AboutImg from "../assets/images/about_us.webp"
 import Heading from "../UI_components/Heading";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import DotsGrid from "../UI_components/DotGrid";
 
 
 const AboutSection = () => {
   return (
     <section className="section_about section-space">
-      <Container>
+      <Container fluid>
         <Row>
-
-
-          <Col md="6" className="mb-4 mb-md-0">
+          <Col md="6" className="mb-4 mb-md-0 position-relative z-index-1">
             <Heading
               subheading={"WELCOME TO REGISTERKARO.IN"}
               subheadingcolor={"var(--primary-color)"}
-              mainHeading={" About <span style={{ color: '#FF8C00' }}>Register Karo</span>"}
+              mainHeading={"About <span class='primary-text'>Register Karo</span>"}
+
               align={'left'}
             />
+
             <p className="para-1">
               We have been using Intelegencia as our DevOps vendor for our field service applications over the last couple of years and I’m extremely pleased with
               their performance, ability to execute, and willingness to adapt in our ever changing environment. Perry is an outstanding leader who is fanatical about
@@ -31,14 +32,15 @@ const AboutSection = () => {
           </Col>
 
           <Col md="6">
-            <div className="position-relative">
+            <div className="position-relative z-index-99 img-box">
               <img
                 src={AboutImg}
                 alt="Team"
-                className="img-fluid"
                 loading="lazy"
-              />
+              /> 
+             
             </div>
+            <DotsGrid />
           </Col>
         </Row>
       </Container>

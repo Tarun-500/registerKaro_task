@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import YoutubeImg from "../assets/images/youtube_banner.webp"
 import Heading from "../UI_components/Heading";
 import { IoMdFlashlight } from "react-icons/io";
@@ -24,7 +24,7 @@ const VideoSection = () => {
             <div className="mt-4">
               <div className="d-flex align-items-start gap-3 mb-4">
                 <div className="circle-btn circle-btn-primary">
-                <IoMdFlashlight />
+                  <IoMdFlashlight />
                 </div>
                 <div>
                   <h5 className="head-5 text-white">Explore ideas together</h5>
@@ -35,7 +35,7 @@ const VideoSection = () => {
               </div>
               <div className="d-flex align-items-start  gap-3">
                 <div className="circle-btn circle-btn-primary">
-                <MdOutlineAutoGraph />
+                  <MdOutlineAutoGraph />
                 </div>
                 <div>
                   <h5 className="head-5 text-white">Bring those ideas to life</h5>
@@ -48,13 +48,13 @@ const VideoSection = () => {
           </Col>
 
           <Col md="6">
-            <div className="position-relative">
+            <div className="position-relative cursor-pointer">
               <img
                 src={YoutubeImg}
                 alt="Video Thumbnail"
                 className="img-fluid rounded shadow"
-                 loading="lazy"
-              /> 
+                loading="lazy"
+              />
             </div>
           </Col>
         </Row>

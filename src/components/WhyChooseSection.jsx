@@ -1,75 +1,90 @@
 import { Container, Row, Col } from "reactstrap";
+import Heading from "../UI_components/Heading";
+import { DangerGuardIcon, SuccessRightIcon, PurpleSmileIcon, PinkMenIcon } from '../data/icons'
+
+const features = [
+    {
+        iconClass: <DangerGuardIcon />,
+        title: "Confidential & Safe",
+        description: "All your private information is safe with us.",
+        colorClass: '#fef3ef',
+        colorBorder: '#fef3ef'
+    },
+    {
+        iconClass: <SuccessRightIcon />,
+        title: "No Hidden Fee",
+        description: "Everything is put before you with no hidden charges or conditions.",
+        colorClass: "#f1fbf3",
+        colorBorder: "#f1fbf3"
+    },
+    {
+        iconClass: "",
+        title: "",
+        description: "",
+        colorClass: "",
+        colorBorder: "transparent"
+    },
+    {
+        iconClass: <PurpleSmileIcon />,
+        title: "Guaranteed Satisfaction",
+        description: "We ensure that you stay 100% satisfied with our offered services.",
+        colorClass: "#edf3ff",
+        colorBorder: "#edf3ff"
+    },
+    {
+        iconClass: <PinkMenIcon />,
+        title: "Expert CA/CS Assistance",
+        description: "Prompt support from our in-house expert professionals.",
+        colorClass: "#fbf1fb",
+        colorBorder: "#fbf1fb"
+    },
+    {
+        iconClass: <DangerGuardIcon />,
+        title: "Confidential & Safe",
+        description: "All your private information is safe with us.",
+        colorClass: '#f7fcf9',
+        colorBorder: '#f7fcf9',
+    }
+];
 
 const WhyChooseSection = () => {
     return (
-        <section className="why_choose_section">
-            <Container className="why-choose-section">
-                <Row>
-                    <Col className="text-center mb-4" xs="12">
-                        <h6 className="section-subtitle">WHY REGISTERKARO.IN</h6>
-                        <h2 className="section-title">Why Choose Register Karo</h2>
-                        <p className="section-description">
-                            It is with consistent services and results that build trust with the people
-                            and that in turn help us to serve the business better.
+        <section className="why_choose_section section-space">
+            <Container fluid>
+                <Row className="content">
+                    <Col className=" mb-4" xs="12" md={12} lg={6}>
+                        <Heading
+                            subheading={"WELCOME TO REGISTERKARO.IN"}
+                            subheadingcolor={"var(--primary-color)"}
+                            mainHeading={`Why Choose <span class='primary-text'> Register Karo </span>`}
+                            mainheadingcolor={"var(--blue-color)"}
+                            align="left"
+                        />
+                        <p className="para-4">
+                            It is with consistent services and results that build trust with the people and that in
+                            turn help us to serve the business better.
                         </p>
                     </Col>
-                </Row>
-                <Row className="justify-content-center">
-                    <Col md="4" sm="6" xs="12" className="feature-card mb-4">
-                        <div className="feature-box">
-                            <div className="icon-container orange">
-                                <i className="fas fa-shield-alt"></i>
-                            </div>
-                            <h5 className="feature-title">Confidential & Safe</h5>
-                            <p className="feature-text">
-                                All your private information is safe with us.
-                            </p>
-                        </div>
-                    </Col>
-                    <Col md="4" sm="6" xs="12" className="feature-card mb-4">
-                        <div className="feature-box">
-                            <div className="icon-container green">
-                                <i className="fas fa-check-circle"></i>
-                            </div>
-                            <h5 className="feature-title">No Hidden Fee</h5>
-                            <p className="feature-text">
-                                Everything is put before you with no hidden charges or conditions.
-                            </p>
-                        </div>
-                    </Col>
-                    <Col md="4" sm="6" xs="12" className="feature-card mb-4">
-                        <div className="feature-box">
-                            <div className="icon-container blue">
-                                <i className="fas fa-smile"></i>
-                            </div>
-                            <h5 className="feature-title">Guaranteed Satisfaction</h5>
-                            <p className="feature-text">
-                                We ensure that you stay 100% satisfied with our offered services.
-                            </p>
-                        </div>
-                    </Col>
-                    <Col md="4" sm="6" xs="12" className="feature-card mb-4">
-                        <div className="feature-box">
-                            <div className="icon-container red">
-                                <i className="fas fa-user-tie"></i>
-                            </div>
-                            <h5 className="feature-title">Expert CA/CS Assistance</h5>
-                            <p className="feature-text">
-                                Prompt support from our in-house expert professionals.
-                            </p>
-                        </div>
-                    </Col>
-                    <Col md="4" sm="6" xs="12" className="feature-card mb-4">
-                        <div className="feature-box">
-                            <div className="icon-container orange">
-                                <i className="fas fa-shield-alt"></i>
-                            </div>
-                            <h5 className="feature-title">Confidential & Safe</h5>
-                            <p className="feature-text">
-                                All your private information is safe with us.
-                            </p>
-                        </div>
-                    </Col>
+
+                    {features?.map((feature, index) => (
+                        <Col key={index} xs={12} sm={6} md={6} lg={3} className="feature-card text-center">
+                            {!feature.title == "" ? (
+                                <div className="feature-box"
+                                    style={{
+                                        backgroundColor: feature.colorClass,
+                                        borderColor: feature.colorBorder
+                                    }}
+                                >
+                                    <div className={`icon-container ${feature.colorClass}`}>
+                                        {feature.iconClass}
+                                    </div>
+                                    <h5 className="head-4 fw-500">{feature.title}</h5>
+                                    <p className="para-4">{feature.description}</p>
+                                </div>
+                            ): ""}
+
+                        </Col>
+                    ))}
                 </Row>
             </Container>
         </section>

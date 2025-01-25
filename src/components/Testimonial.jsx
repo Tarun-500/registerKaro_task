@@ -145,8 +145,8 @@ const TestimonialSlider = () => {
                   loading="lazy"
                 />
                 <div>
-                  <h4 className="testimonial-name">{testimonial.name}</h4>
-                  <p className="testimonial-designation para-1">
+                  <h5 className="head-5">{testimonial.name}</h5>
+                  <p className="para-4">
                     {testimonial.designation}
                   </p>
                 </div>

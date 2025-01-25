@@ -8,8 +8,8 @@ const StyledButton = styled.button`
     $size === "small"
       ? "8px 12px"
       : $size === "large"
-      ? "16px 24px"
-      : "12px 18px"};
+        ? "16px 24px"
+        : "12px 18px"};
   font-size: ${({ $size }) =>
     $size === "small" ? "14px" : $size === "large" ? "18px" : "16px"};
   border: none;
@@ -20,7 +20,7 @@ const StyledButton = styled.button`
   justify-content: center;
   cursor: pointer;
   gap: 8px;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 
   &:hover {
     opacity: 0.8;
@@ -33,6 +33,11 @@ const StyledButton = styled.button`
 
   .prev-icon {
     color: var(--brown-color-1);
+  }
+
+  @media (max-width: 576px) {
+    font-size: ${({ $size }) =>
+    $size === "small" ? "12px" : $size === "large" ? "16px" : "14px"};
   }
 `;
 
@@ -69,17 +74,17 @@ const Button = ({
 
 
 Button.propTypes = {
-  text: PropTypes.string, 
-  color: PropTypes.string, 
-  textcolor: PropTypes.string, 
-  icon: PropTypes.node, 
-  onClick: PropTypes.func, 
-  size: PropTypes.oneOf(["small", "medium", "large"]), 
-  disabled: PropTypes.bool, 
+  text: PropTypes.string,
+  color: PropTypes.string,
+  textcolor: PropTypes.string,
+  icon: PropTypes.node,
+  onClick: PropTypes.func,
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+  disabled: PropTypes.bool,
   fw: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  previcon: PropTypes.node, 
-  className: PropTypes.string, 
-  arialabel: PropTypes.string, 
+  previcon: PropTypes.node,
+  className: PropTypes.string,
+  arialabel: PropTypes.string,
 };
 
 export default Button;

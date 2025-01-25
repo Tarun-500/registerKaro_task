@@ -3,7 +3,7 @@ import { Container } from "reactstrap";
 import Heading from "../UI_components/Heading";
 import Button from "../UI_components/Button";
 import { LuArrowRight, LuChevronRight, LuChevronDown } from "react-icons/lu";
- 
+
 
 const FAQAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -43,14 +43,13 @@ const FAQAccordion = () => {
               <div className="faq-question">
                 {faq}
                 <span className="faq-arrow">
-                  {activeIndex === index ? <LuChevronDown /> : <LuChevronRight />} 
+                  {activeIndex === index ? <LuChevronDown /> : <LuChevronRight />}
                 </span>
               </div>
               {activeIndex === index && (
-                <div className="faq-answer">
+                <div className={"faq-answer"}>
                   <p>
-                    Yes, this software allows you to recover deleted files from
-                    your desktop with ease.
+                    {" Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}
                   </p>
                 </div>
               )}
@@ -58,9 +57,9 @@ const FAQAccordion = () => {
           ))}
         </div>
 
-         <div className="text-center">
-         <Button color={"var(--blue-color)"} text={"Show more"} icon={<LuArrowRight />} />
-         </div>
+        <div className="text-center">
+          <Button color={"var(--blue-color)"} text={"Show more"} icon={<LuArrowRight />} />
+        </div>
 
       </Container>
 

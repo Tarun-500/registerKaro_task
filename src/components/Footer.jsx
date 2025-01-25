@@ -82,6 +82,7 @@ const Footer = () => {
             <Col>
               <Button 
                 onClick={scrollToTop}
+                className="btn-top"
                 style={{
                   width: "56px",
                   background:"var(--primary-color)",

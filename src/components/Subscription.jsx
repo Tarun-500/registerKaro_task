@@ -1,5 +1,4 @@
-import React from "react";
-import { Container, Row, Col, Input, Button, Form, FormGroup } from "reactstrap";
+import { Container, Row, Col, Input, Form } from "reactstrap";
 import styled from "styled-components";
 import Heading from "../UI_components/Heading";
 
@@ -44,7 +43,11 @@ line-height: 1.5;
 border-radius:0 6px  6px 0;
 border:none;
 background-color: var(--primary-color); 
+  transition: opacity 0.3s ease;
 
+&:hover{
+    opacity: 0.8;
+}
 }
 
   .features { 

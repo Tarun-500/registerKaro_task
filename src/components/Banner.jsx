@@ -6,14 +6,16 @@ import StarIcon from '../assets/images/icons/star.svg'
 import StarIcon2 from '../assets/images/icons/star_square.svg'
 import { FinancialStabilityIcon, ClientsIcon, CustomerRatingIcon, PlayIcon } from "../data/icons"
 import { Link } from "react-router-dom"
+import { RightIcon } from "../data/icons"
 const Banner = () => {
   return (
-    <section className="section_banner">
+    <section className="section_banner overflow-hidden">
       <Container fluid>
         <Row>
           <Col lg={6} sm={12} className="text-section">
             <div>
-              <span> <img src={StarIcon} alt="star" /> Google Rating
+              <span className="rating"> <img src={StarIcon} alt="star" />
+              <span className="px-2"> Google Rating </span>
                 {
                   Array.from({ length: 5 }).map((_, index) => (
                     <img src={StarIcon2} alt="star" key={index} />
@@ -82,16 +84,16 @@ const Banner = () => {
 
       <div className="vertical-buttons">
         <Link to="/annual-compliance" className="btn btn-light">
-          Annual Compliance
+          <small className="d-sm-none"> <RightIcon />  </small>   <span> Annual Compliance</span>
         </Link>
         <Link to="/payroll-services" className="btn btn-light">
-          Payroll Services
-          </Link>
+          <small className="d-sm-none"> <RightIcon />  </small>    <span> Payroll Services</span>
+        </Link>
         <Link to="/company-formation" className="btn btn-light">
-          Company Formation
+          <small className="d-sm-none"> <RightIcon />  </small>   <span>  Company Formation</span>
         </Link>
         <Link to="/annual-compliance" className="btn btn-light">
-          Annual Compliance
+          <small className="d-sm-none"> <RightIcon />  </small>    <span>  Annual Compliance</span>
         </Link>
       </div>
     </section>
