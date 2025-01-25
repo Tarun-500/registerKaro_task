@@ -10,6 +10,7 @@ import Heading from "../UI_components/Heading";
 const StyledParagraph = styled.p`
   &.para-1 {
     padding: 25px 0 50px 0; 
+    margin:0;
 
       @media(max-width:991px){
   padding: 16px 0 25px 0; 
@@ -51,8 +52,8 @@ overflow: hidden;
   }
 
    & div  {
-   width:308px;
-    height:490px;
+   width:300px;
+    height:500px;
     position: relative;
 display:inline-block;
 

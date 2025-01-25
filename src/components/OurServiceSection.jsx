@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { FormationServiceIcon, SecretarialServicesIcon, OfficeAddressServicesIcon, ComplianceServicesIcon, PayrollServicesIcon, BookkeepingServicesIcon } from '../data/icons'
 import Heading from "../UI_components/Heading";

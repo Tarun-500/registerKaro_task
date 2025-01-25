@@ -210,6 +210,9 @@
     padding: 50px 20px;
     row-gap: 50px;
 
+    .box {
+      cursor: pointer;
+    }
     > :nth-child(2),
     > :nth-child(5) {
       position: relative;
@@ -225,6 +228,7 @@
         height: 20px;
         background-color: var(--brown-color);
         transform: translate(calc(-50% - 0.5px), 50%);
+        transition: all 0.3s linear;
       }
 
       &::after {
@@ -236,6 +240,16 @@
         height: 20px;
         background-color: var(--brown-color);
         transform: translate(calc(50% + 0.5px), -50%);
+        transition: all 0.3s linear;
+      }
+
+      &:hover {
+        &::after {
+          top: 1%;
+        }
+        &::before {
+          top: 100%;
+        }
       }
     }
   }
@@ -277,6 +291,8 @@
           background-color: var(--brown-color);
           transform: translate(calc(50% - 0.5px), 50%);
         }
+
+       
       }
 
       > :nth-child(2) {
@@ -320,6 +336,7 @@
           height: 4px;
           background-color: var(--brown-color);
           transform: translate(50%, -50%);
+          transition: all .3s linear;
         }
       }
 
@@ -329,6 +346,13 @@
         &::after {
           right: 25%;
         }
+
+        &:hover {
+          &::after {
+            top: 100%;
+            right: 75%; 
+          } 
+        }
       }
 
       > :nth-child(1),
@@ -337,7 +361,14 @@
         &::after {
           right: 75%;
         }
-      }
+
+        &:hover {
+          &::after {
+            top: 100%;
+            right: 25%; 
+          } 
+        }
+      } 
     }
   }
 }
