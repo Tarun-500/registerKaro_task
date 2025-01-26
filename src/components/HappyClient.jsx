@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import LogoImg1 from "../assets/images/companies_logo/Logo_1.png";
 import LogoImg2 from "../assets/images/companies_logo/Logo_2.png";
 import LogoImg3 from "../assets/images/companies_logo/Logo_3.png";
@@ -22,110 +22,107 @@ import LogoImg20 from "../assets/images/companies_logo/Logo_20.png";
 import LogoImg21 from "../assets/images/companies_logo/Logo_21.png";
 import LogoImg22 from "../assets/images/companies_logo/Logo_22.png";
 import LogoImg23 from "../assets/images/companies_logo/Logo_23.png";
- 
+import Heading from "../UI_components/Heading";
+
 const images = [
-  LogoImg1,
-  LogoImg2,
-  LogoImg3,
-  LogoImg4,
-  LogoImg5,
-  LogoImg6,
-  LogoImg7,
-  LogoImg8,
-  LogoImg9,
-  LogoImg10,
-  LogoImg11,
-  LogoImg12,
-  LogoImg13,
-  LogoImg14,
-  LogoImg15,
-  LogoImg16,
-  LogoImg17,
-  LogoImg18,
-  LogoImg19,
-  LogoImg20,
-  LogoImg21,
-  LogoImg22,
-  LogoImg23,
+  { src: LogoImg1, alt: "Logo 1" },
+  { src: LogoImg2, alt: "Logo 2" },
+  { src: LogoImg3, alt: "Logo 3" },
+  { src: LogoImg4, alt: "Logo 4" },
+  { src: LogoImg5, alt: "Logo 5" },
+  { src: LogoImg6, alt: "Logo 6" },
+  { src: LogoImg7, alt: "Logo 7" },
+  { src: LogoImg8, alt: "Logo 8" },
+  { src: LogoImg9, alt: "Logo 9" },
+  { src: LogoImg10, alt: "Logo 10" },
+  { src: LogoImg11, alt: "Logo 11" },
+  { src: LogoImg12, alt: "Logo 12" },
+  { src: LogoImg13, alt: "Logo 13" },
+  { src: LogoImg14, alt: "Logo 14" },
+  { src: LogoImg15, alt: "Logo 15" },
+  { src: LogoImg16, alt: "Logo 16" },
+  { src: LogoImg17, alt: "Logo 17" },
+  { src: LogoImg18, alt: "Logo 18" },
+  { src: LogoImg19, alt: "Logo 19" },
+  { src: LogoImg20, alt: "Logo 20" },
+  { src: LogoImg21, alt: "Logo 21" },
+  { src: LogoImg22, alt: "Logo 22" },
+  { src: LogoImg23, alt: "Logo 23" },
 ];
 
+const imgWidth = 60;
+const imgHeight = 60;
+const animateImage = (canvas, imageObj) => {
+  const ctx = canvas.getContext("2d");
+  const img = new Image();
+  img.src = imageObj.src;
+  img.alt = imageObj.alt;  
+
+  const canvasWidth = canvas.width;
+  const canvasHeight = canvas.height;
+
+  let x = Math.random() * (canvasWidth - 40);
+  let y = Math.random() * (canvasHeight - 40);
+  let dx = Math.random() * 0.05 + 0.05;
+  let dy = Math.random() * 0.05 + 0.05;
+
+  img.onload = () => {
+    startAnimation();
+  };
+
+  const startAnimation = () => {
+    requestAnimationFrame(updateCanvas);
+  };
+
+  const updateCanvas = () => {
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    ctx.drawImage(img, x, y, imgWidth, imgHeight);
+
+    moveImage();
+
+    checkBoundaries();
+
+    requestAnimationFrame(updateCanvas);
+  };
+
+  const moveImage = () => {
+    x += dx;
+    y += dy;
+  };
+
+  const checkBoundaries = () => {
+    if (x + imgWidth > canvasWidth || x < 0) dx = -dx;
+    if (y + imgHeight > canvasHeight || y < 0) dy = -dy;
+  };
+};
+
 const HappyClient = () => {
-  const containerRef = useRef(null);
-
   useEffect(() => {
-    if (!containerRef.current) return;
-    const container = containerRef.current;
-
-    const particles = [];
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
-
-    // Function to create particle (image)
-    const createParticle = (src) => {
-      const particle = document.createElement("img");
-      const size = [30, 50, 80][Math.floor(Math.random() * 3)];
-
-      particle.classList.add("particle");
-      particle.src = src;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.position = "absolute";
-      particle.style.top = "0";
-      particle.style.left = "0";
-      particle.dataset.size = size;
-
-      container.appendChild(particle);
-      return { particle, size };
-    };
-
-    let currentX = 0;
-
-    // Initialize particles with random spacing (80px - 200px gap)
-    images.forEach((image) => {
-      const { particle, size } = createParticle(image);
-
-      // Set random gap (between 80px and 200px)
-      const gap = Math.random() * 120 + 80;  // Random gap between 80px and 200px
-      currentX += gap;  // Update the starting X position
-
-      particle.style.left = `${currentX}px`;
-      particle.style.top = `${Math.random() * (containerHeight - size)}px`; // Random Y position
-
-      particles.push({ particle, size });
+    const canvases = document.querySelectorAll(".canvas-box canvas");
+    canvases.forEach((canvas, index) => {
+      if (images[index]) {
+        animateImage(canvas, images[index]);
+      }
     });
-
-    // Infinite animation for particles with evenly spread out spacing
-    const animate = () => {
-      particles.forEach(({ particle, size }, index) => {
-        const speed = 2 + Math.random() * 2;  // Random speed for each image
-
-        // Get the current left position and calculate the new position
-        let currentLeft = parseFloat(particle.style.left);
-        
-        // Move image to the left
-        currentLeft -= speed;
-        
-        // Reset image to right side once it moves out of view
-        if (currentLeft + size < 0) {
-          currentLeft = containerWidth + size;  // Place it back on the right
-        }
-        
-        // Apply the new left position to create the sliding effect
-        particle.style.left = `${currentLeft}px`;
-      });
-
-      // Recursively call animate to create the infinite loop
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      particles.forEach(({ particle }) => container.removeChild(particle));
-    };
   }, []);
 
-  return <div ref={containerRef} className="floating-images-container"></div>;
+  return (
+    <section className="float_logo_section">
+      <Heading 
+      mainHeading="Our Happy Clients"
+      align="center"
+      />
+      <p className="mx-800 mx-auto para-1 light-text">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service. </p>
+      <div className="canvas-container">
+        {images.map((_, index) => (
+          <div className="canvas-box" key={index}>
+            <canvas width={"100"} height={"100"}></canvas>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default HappyClient;

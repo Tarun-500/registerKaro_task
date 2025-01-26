@@ -15,7 +15,7 @@ const Banner = () => {
           <Col lg={6} sm={12} className="text-section">
             <div>
               <span className="rating"> <img src={StarIcon} alt="star" />
-              <span className="px-2"> Google Rating </span>
+                <span className="px-2"> Google Rating </span>
                 {
                   Array.from({ length: 5 }).map((_, index) => (
                     <img src={StarIcon2} alt="star" key={index} />
@@ -84,16 +84,16 @@ const Banner = () => {
 
       <div className="vertical-buttons">
         <Link to="/annual-compliance" className="btn btn-light">
-          <small className="d-sm-none"> <RightIcon />  </small>   <span> Annual Compliance</span>
+          <span className="d-sm-none"> <RightIcon />  </span>   <small> Annual Compliance</small>
         </Link>
         <Link to="/payroll-services" className="btn btn-light">
-          <small className="d-sm-none"> <RightIcon />  </small>    <span> Payroll Services</span>
+          <span className="d-sm-none"> <RightIcon />  </span>    <small> Payroll Services</small>
         </Link>
         <Link to="/company-formation" className="btn btn-light">
-          <small className="d-sm-none"> <RightIcon />  </small>   <span>  Company Formation</span>
+          <span className="d-sm-none"> <RightIcon />  </span>   <small>  Company Formation</small>
         </Link>
         <Link to="/annual-compliance" className="btn btn-light">
-          <small className="d-sm-none"> <RightIcon />  </small>    <span>  Annual Compliance</span>
+          <span className="d-sm-none"> <RightIcon />  </span>    <small>  Annual Compliance</small>
         </Link>
       </div>
     </section>

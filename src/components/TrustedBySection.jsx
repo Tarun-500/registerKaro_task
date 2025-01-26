@@ -24,6 +24,7 @@ const TrustedBySection = () => {
     const settings = {
         dots: false,
         infinite: true,
+        autoplay:true,
         arrows: false,
         speed: 500,
         slidesToShow: 6,
@@ -32,14 +33,28 @@ const TrustedBySection = () => {
             {
                 breakpoint: 1000,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true,
+                    // dots: true,
                 },
             },
             {
                 breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 425,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -60,8 +75,8 @@ const TrustedBySection = () => {
                                     <img
                                         src={logo.src}
                                         alt={logo.alt}
-                                        style={{ width: "138px", margin: "0 auto" }}
-                                         loading="lazy"
+                                        style={{ width: "138px", margin: "auto" }}
+                                        loading="lazy"
                                     />
                                 </div>
                             ))}

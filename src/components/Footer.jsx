@@ -1,5 +1,54 @@
 import { Container, Row, Col, Button } from "reactstrap";
 import { Link } from "react-router-dom";
+
+const sections = [
+  {
+    title: "START A BUSINESS",
+    links: [
+      { text: "Features", url: "/features" },
+      { text: "Solutions", url: "/solutions" },
+      { text: "Integrations", url: "/integrations" },
+      { text: "Enterprise", url: "/enterprise" },
+      { text: "Solutions", url: "/solutions" },
+    ],
+  },
+  {
+    title: "GOVERNMENT REGISTRATION",
+    links: [
+      { text: "Partners", url: "/partners" },
+      { text: "Community", url: "/community" },
+      { text: "Developers", url: "/developers" },
+      { text: "App", url: "/app" },
+      { text: "Blog", url: "/blog" },
+    ],
+  },
+  {
+    title: "COMPLIANCE & TAX",
+    links: [
+      { text: "Channels", url: "/channels" },
+      { text: "Scale", url: "/scale" },
+      { text: "Watch the Demo", url: "/watch-demo" },
+      { text: "Our Competition", url: "/competition" },
+    ],
+  },
+  {
+    title: "BIS & CDSCO",
+    links: [
+      { text: "About Us", url: "/about-us" },
+      { text: "News", url: "/news" },
+      { text: "Leadership", url: "/leadership" },
+      { text: "Media Kit", url: "/media-kit" },
+    ],
+  },
+];
+
+const socialLinks = [
+  { icon: "fab fa-facebook", url: "https://facebook.com" },
+  { icon: "fab fa-google", url: "https://google.com" },
+  { icon: "fab fa-apple", url: "https://apple.com" },
+  { icon: "fab fa-instagram", url: "https://instagram.com" },
+];
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -13,92 +62,54 @@ const Footer = () => {
       <footer>
         <Container fluid>
           <Row>
-
-            <Col md={3} xs={12} className="">
+            <Col md={3} xs={12}>
               <p className="light-text para-1">
                 Design outstanding interfaces with advanced Figma features in a matter of minutes.
               </p>
               <div className="icons">
-                <Link to="https://facebook.com"  target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-facebook"></i>
-                </Link>
-                <Link to="https://google.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-google"></i>
-                </Link>
-                <Link to="https://apple.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-apple"></i>
-                </Link>
-                <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-instagram"></i>
-                </Link>
+                {socialLinks.map((social, index) => (
+                  <Link key={index} to={social.url} target="_blank" rel="noopener noreferrer">
+                    <i className={social.icon}></i>
+                  </Link>
+                ))}
               </div>
             </Col>
 
-
-            <Col md={2} xs={6} className="mb-4">
-              <h6>START A BUSINESS</h6>
-              <ul className="list-unstyled">
-                <li><Link className="para-1 light-text" to="/features">Features</Link></li>
-                <li><Link className="para-1 light-text" to="/solutions">Solutions</Link></li>
-                <li><Link className="para-1 light-text" to="/integrations">Integrations</Link></li>
-                <li><Link className="para-1 light-text" to="/enterprise">Enterprise</Link></li>
-                <li><Link className="para-1 light-text" to="/solutions">Solutions</Link></li>
-              </ul>
-            </Col>
-
-            <Col md={3} xs={6} className="mb-4">
-              <h6>GOVERNMENT REGISTRATION</h6>
-              <ul className="list-unstyled">
-                <li><Link className="para-1 light-text" to="/partners">Partners</Link></li>
-                <li><Link className="para-1 light-text" to="/community">Community</Link></li>
-                <li><Link className="para-1 light-text" to="/developers">Developers</Link></li>
-                <li><Link className="para-1 light-text" to="/app">App</Link></li>
-                <li><Link className="para-1 light-text" to="/blog">Blog</Link></li>
-              </ul>
-            </Col>
-
-            <Col md={2} xs={6} className="mb-4">
-              <h6>COMPLIANCE & TAX</h6>
-              <ul className="list-unstyled">
-                <li><Link className="para-1 light-text" to="/channels">Channels</Link></li>
-                <li><Link className="para-1 light-text" to="/scale">Scale</Link></li>
-                <li><Link className="para-1 light-text" to="/watch-demo">Watch the Demo</Link></li>
-                <li><Link className="para-1 light-text" to="/competition">Our Competition</Link></li>
-              </ul>
-            </Col>
-
-            <Col md={2} xs={6} className="mb-4">
-              <h6>BIS & CDSCO</h6>
-              <ul className="list-unstyled">
-                <li><Link className="para-1 light-text" to="/about-us">About Us</Link></li>
-                <li><Link className="para-1 light-text" to="/news">News</Link></li>
-                <li><Link className="para-1 light-text" to="/leadership">Leadership</Link></li>
-                <li><Link className="para-1 light-text" to="/media-kit">Media Kit</Link></li>
-              </ul>
-            </Col>
+            {sections.map((section, index) => (
+              <Col key={index} md={2} xs={6} className="mb-4">
+                <h6>{section.title}</h6>
+                <ul className="list-unstyled">
+                  {section.links.map((link, idx) => (
+                    <li key={idx}>
+                      <Link className="para-1 light-text" to={link.url}>
+                        {link.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </Col>
+            ))}
           </Row>
 
           <Row className="text-center">
             <Col>
-              <Button 
+              <Button
                 onClick={scrollToTop}
                 className="btn-top"
                 style={{
                   width: "56px",
-                  background:"var(--primary-color)",
+                  background: "var(--primary-color)",
                   height: "56px",
                   borderRadius: "50%",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  margin: "0 auto 16px auto",
+                  margin: "0 auto 30px auto",
                 }}
               >
                 <i className="fas fa-arrow-up text-white"></i>
               </Button>
-              <p className="para-1 light-text mb-0">
-                © 2024 Registerkaro. All Rights Reserved.
-              </p>
+              <p className="para-1 light-text mb-0">© 2024 Registerkaro. All Rights Reserved.</p>
             </Col>
           </Row>
         </Container>

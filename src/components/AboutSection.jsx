@@ -16,7 +16,6 @@ const AboutSection = () => {
               subheading={"WELCOME TO REGISTERKARO.IN"}
               subheadingcolor={"var(--primary-color)"}
               mainHeading={"About <span class='primary-text'>Register Karo</span>"}
-
               align={'left'}
             />
 
@@ -38,7 +37,6 @@ const AboutSection = () => {
                 alt="Team"
                 loading="lazy"
               /> 
-             
             </div>
             <DotsGrid />
           </Col>

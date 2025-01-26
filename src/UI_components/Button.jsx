@@ -63,7 +63,7 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       className={className}
-      aria-label={arialabel || undefined}
+      ariaLabel={arialabel || undefined}
     >
       {previcon && <span className="prev-icon">{previcon}</span>}
       {text}

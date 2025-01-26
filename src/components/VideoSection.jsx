@@ -1,14 +1,16 @@
 import { Container, Row, Col } from "reactstrap";
-import YoutubeImg from "../assets/images/youtube_banner.webp"
+// import YoutubeImg from "../assets/images/youtube_banner.webp"
 import Heading from "../UI_components/Heading";
 import { IoMdFlashlight } from "react-icons/io";
 import { MdOutlineAutoGraph } from "react-icons/md";
-
+const videoId = "lYO6FqbN3-s?si=6moAz498QPWXgCcK"
 const VideoSection = () => {
+
+
   return (
     <section className="section_video section-space bg-blue">
-      <Container>
-        <Row className="align-items-center">
+      <Container fluid>
+        <Row>
 
           <Col md="6">
             <Heading
@@ -48,14 +50,23 @@ const VideoSection = () => {
           </Col>
 
           <Col md="6">
-            <div className="position-relative cursor-pointer">
+            {/* <div className="position-relative cursor-pointer">
               <img
                 src={YoutubeImg}
                 alt="Video Thumbnail"
                 className="img-fluid rounded shadow"
                 loading="lazy"
               />
-            </div>
+            </div> */}
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
+                title={"title"}
+                width={"100%"}
+                height={"100%"}
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              ></iframe>
+
           </Col>
         </Row>
       </Container>

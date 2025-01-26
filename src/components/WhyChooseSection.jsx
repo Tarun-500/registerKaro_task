@@ -8,14 +8,14 @@ const features = [
         title: "Confidential & Safe",
         description: "All your private information is safe with us.",
         colorClass: '#fef3ef',
-        colorBorder: '#fef3ef'
+        colorBorder: '#ffd4c4'
     },
     {
         iconClass: <SuccessRightIcon />,
         title: "No Hidden Fee",
         description: "Everything is put before you with no hidden charges or conditions.",
         colorClass: "#f1fbf3",
-        colorBorder: "#f1fbf3"
+        colorBorder: "#bcffc9"
     },
     {
         iconClass: "",
@@ -29,21 +29,21 @@ const features = [
         title: "Guaranteed Satisfaction",
         description: "We ensure that you stay 100% satisfied with our offered services.",
         colorClass: "#edf3ff",
-        colorBorder: "#edf3ff"
+        colorBorder: "#bfd4ff"
     },
     {
         iconClass: <PinkMenIcon />,
         title: "Expert CA/CS Assistance",
         description: "Prompt support from our in-house expert professionals.",
         colorClass: "#fbf1fb",
-        colorBorder: "#fbf1fb"
+        colorBorder: "#ffd3ff"
     },
     {
         iconClass: <DangerGuardIcon />,
         title: "Confidential & Safe",
         description: "All your private information is safe with us.",
         colorClass: '#f7fcf9',
-        colorBorder: '#f7fcf9',
+        colorBorder: '#adffce',
     }
 ];
 
@@ -64,7 +64,7 @@ const WhyChooseSection = () => {
                             It is with consistent services and results that build trust with the people and that in
                             turn help us to serve the business better.
                         </p>
-                    </Col>
+                    </Col> 
 
                     {features?.map((feature, index) => (
                         <Col key={index} xs={12} sm={6} md={6} lg={3} className="feature-card text-center">
@@ -72,10 +72,10 @@ const WhyChooseSection = () => {
                                 <div className="feature-box"
                                     style={{
                                         backgroundColor: feature.colorClass,
-                                        borderColor: feature.colorBorder
+                                        borderColor: feature.colorBorder 
                                     }}
                                 >
-                                    <div className={`icon-container ${feature.colorClass}`}>
+                                    <div className={"icon-container"}>
                                         {feature.iconClass}
                                     </div>
                                     <h5 className="head-4 fw-500">{feature.title}</h5>

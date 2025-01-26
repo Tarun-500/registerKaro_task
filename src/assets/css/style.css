@@ -123,9 +123,12 @@
     .stars {
       flex-wrap: wrap;
     }
-
+    .vertical-buttons {
+      width: 150px;
+      align-items: end;
+    }
     .text-section {
-      padding: 20px;
+      padding: 20px 10px;
       h1 {
         font-size: var(--fs-32);
       }
@@ -133,37 +136,34 @@
         font-size: var(--fs-15);
       }
     }
+    a {
+      padding: 12px;
+      font-size: var(--fs-12);
+      position: relative;
+      width: 40px;
+      white-space: nowrap;
+      small {
+        position: absolute;
+        opacity: 0;
+        left: 150px;
+        transition: all 0.3s ease-in;
+        color: var(--white-color);
+      }
 
-    .vertical-buttons {
-      position: absolute;
-      bottom: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      svg {
+        transition: all 0.3s ease-in;
+      }
 
-      a {
-        padding: 12px;
-        font-size: var(--fs-12);
-        position: relative;
-
-        span {
-          position: absolute;
-          opacity: 0;
-          left: 150px;
-          transition: all 0.3s ease-in;
-          color: var(--white-color);
+      &:hover {
+        width: 150px;
+        small {
+          opacity: 1;
+          left: 0;
+          position: initial;
         }
 
-        &:hover {
-          span {
-            position: relative;
-            opacity: 1;
-            left: 0;
-          }
-
-          svg {
-            display: none;
-          }
+        svg {
+          display: none;
         }
       }
     }
@@ -171,12 +171,16 @@
 }
 
 /* ------- why choose section -------- */
-
 .why_choose_section {
   padding-left: 10px;
   padding-right: 10px;
+
   .content {
     row-gap: 30px;
+
+    .para-4 {
+      margin: 0;
+    }
 
     .feature-box {
       padding: 20px;
@@ -185,6 +189,7 @@
       border: 1px solid transparent;
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
+
       &:hover {
         transform: scale(1.05) translateY(-5px);
       }
@@ -196,8 +201,18 @@
         color: var(--text-color-light);
       }
     }
+
     .icon-container {
       margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .content {
+      row-gap: 20px;
+    }
+    .feature-card:nth-of-type(4) {
+      display: none;
     }
   }
 }
@@ -291,8 +306,6 @@
           background-color: var(--brown-color);
           transform: translate(calc(50% - 0.5px), 50%);
         }
-
-       
       }
 
       > :nth-child(2) {
@@ -336,7 +349,7 @@
           height: 4px;
           background-color: var(--brown-color);
           transform: translate(50%, -50%);
-          transition: all .3s linear;
+          transition: all 0.3s linear;
         }
       }
 
@@ -350,8 +363,8 @@
         &:hover {
           &::after {
             top: 100%;
-            right: 75%; 
-          } 
+            right: 75%;
+          }
         }
       }
 
@@ -365,10 +378,10 @@
         &:hover {
           &::after {
             top: 100%;
-            right: 25%; 
-          } 
+            right: 25%;
+          }
         }
-      } 
+      }
     }
   }
 }
@@ -413,6 +426,15 @@
       width: 100%;
     }
   }
+  @media (max-width: 576px) {
+    .img-box {
+      width: 100%;
+    }
+    &::after {
+      width: 30px;
+      transform: translate(calc(-50% - 15px), -50%);
+    }
+  }
 }
 
 /* ---------- blog section ----------- */
@@ -420,6 +442,32 @@
   .blog-container {
     padding: 50px 10px 0 10px;
     row-gap: 40px;
+  }
+}
+
+/* ------- floating section ----------- */
+
+.float_logo_section {
+  padding: 20px;
+  .canvas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-evenly;
+  }
+
+  .canvas-box {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 576px) {
+    .canvas-box {
+      width: 90px;
+      height: 90px;
+    }
   }
 }
 
@@ -703,42 +751,5 @@
       transform: translateY(-4px);
       box-shadow: 0px 0px 10px var(--primary-color);
     }
-  }
-}
-
-/* Container Styling */
-.floating-images-container {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background-color: #000;
-  overflow: hidden;
-}
-
-/* Particle Styling */
-.particle {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  pointer-events: none;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.particle {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0.9;
-  animation: move 20s linear infinite;
-  /* Smooth infinite animation */
-}
-
-@keyframes move {
-  0% {
-    transform: translateX(100vw) translateY(0);
-  }
-
-  100% {
-    transform: translateX(-100vw) translateY(30px);
-    /* Adjust up and down motion */
   }
 }
