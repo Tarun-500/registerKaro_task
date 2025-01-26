@@ -108,7 +108,7 @@ const HappyClient = () => {
   }, []);
 
   return (
-    <section className="float_logo_section">
+    <section className="float_logo_section section_space">
       <Heading 
       mainHeading="Our Happy Clients"
       align="center"

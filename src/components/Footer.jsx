@@ -43,10 +43,10 @@ const sections = [
 ];
 
 const socialLinks = [
-  { icon: "fab fa-facebook", url: "https://facebook.com" },
-  { icon: "fab fa-google", url: "https://google.com" },
-  { icon: "fab fa-apple", url: "https://apple.com" },
-  { icon: "fab fa-instagram", url: "https://instagram.com" },
+  { icon: "fab fa-facebook", url: "https://facebook.com" , area:"Visit Facebook"},
+  { icon: "fab fa-google", url: "https://google.com", area:"Visit Google" },
+  { icon: "fab fa-apple", url: "https://apple.com", area:"Visit Apple" },
+  { icon: "fab fa-instagram", url: "https://instagram.com", area:"Visit Instagram" },
 ];
 
 const Footer = () => {
@@ -77,11 +77,11 @@ const Footer = () => {
 
             {sections.map((section, index) => (
               <Col key={index} md={2} xs={6} className="mb-4">
-                <h6>{section.title}</h6>
+                <h5>{section.title}</h5>
                 <ul className="list-unstyled">
                   {section.links.map((link, idx) => (
                     <li key={idx}>
-                      <Link className="para-1 light-text" to={link.url}>
+                      <Link className="para-1 light-text" to={link.url} ariaLevel={link.area}>
                         {link.text}
                       </Link>
                     </li>

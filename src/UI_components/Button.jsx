@@ -56,6 +56,7 @@ const Button = ({
 }) => {
   return (
     <StyledButton
+      type="button"
       $color={color}
       $textcolor={textcolor}
       $size={size}
