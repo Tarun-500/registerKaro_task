@@ -81,7 +81,7 @@ const Footer = () => {
                 <ul className="list-unstyled">
                   {section.links.map((link, idx) => (
                     <li key={idx}>
-                      <Link className="para-1 light-text" to={link.url} ariaLevel={link.area}>
+                      <Link className="para-1 light-text" to={link.url} aria-level={link.area}>
                         {link.text}
                       </Link>
                     </li>
