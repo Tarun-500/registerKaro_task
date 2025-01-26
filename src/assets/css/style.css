@@ -706,7 +706,7 @@
     row-gap: 30px;
   }
 
-  & h6 {
+  & h5 {
     font-family: var(--font-primary);
     font-size: var(--fs-16);
     font-weight: var(--fw-700);
