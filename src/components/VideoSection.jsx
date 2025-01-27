@@ -3,7 +3,8 @@ import { Container, Row, Col } from "reactstrap";
 import Heading from "../UI_components/Heading";
 import { IoMdFlashlight } from "react-icons/io";
 import { MdOutlineAutoGraph } from "react-icons/md";
-const videoId = "https://www.youtube.com/embed/lYO6FqbN3-s?si=G1SZWEG01RihUrSF"
+const videoId = "https://www.youtube.com/embed/lYO6FqbN3-s?si=4u3TBh8p8i00B6f7"
+ 
 const VideoSection = () => {
 
 
