@@ -43,10 +43,10 @@ const sections = [
 ];
 
 const socialLinks = [
-  { icon: "fab fa-facebook", url: "https://facebook.com" , area:"Visit Facebook"},
-  { icon: "fab fa-google", url: "https://google.com", area:"Visit Google" },
-  { icon: "fab fa-apple", url: "https://apple.com", area:"Visit Apple" },
-  { icon: "fab fa-instagram", url: "https://instagram.com", area:"Visit Instagram" },
+  { icon: "fab fa-facebook", url: "https://facebook.com", area: "Visit Facebook" },
+  { icon: "fab fa-google", url: "https://google.com", area: "Visit Google" },
+  { icon: "fab fa-apple", url: "https://apple.com", area: "Visit Apple" },
+  { icon: "fab fa-instagram", url: "https://instagram.com", area: "Visit Instagram" },
 ];
 
 const Footer = () => {
@@ -68,7 +68,7 @@ const Footer = () => {
               </p>
               <div className="icons">
                 {socialLinks.map((social, index) => (
-                  <Link key={index} to={social.url} target="_blank" rel="noopener noreferrer" aria-level={link.area}>
+                  <Link key={index} to={social.url} target="_blank" rel="noopener noreferrer" aria-level={social.area}>
                     <i className={social.icon}></i>
                   </Link>
                 ))}
