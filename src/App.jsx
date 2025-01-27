@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "aos/dist/aos.css";
-
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter as Router, } from 'react-router-dom';
 
 import Header from "./components/Header";
