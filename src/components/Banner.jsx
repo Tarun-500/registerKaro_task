@@ -22,7 +22,7 @@ const Banner = () => {
                   ))
                 }
               </span>
-              <h1>Your trusted partner <br /> for compliance business needs</h1>
+              <h1>Your Trusted Partner <br /> For <span className="primary-text">Compliance</span>  needs</h1>
               <div className="line"></div>
               <p>
                 An online business compliance platform that helps entrepreneurs
