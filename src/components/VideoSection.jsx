@@ -59,7 +59,7 @@ const VideoSection = () => {
               />
             </div> */}
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
+              src={videoId}
               title={"register karo video"}
               width={"100%"}
               height={"100%"}
