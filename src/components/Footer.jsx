@@ -68,7 +68,7 @@ const Footer = () => {
               </p>
               <div className="icons">
                 {socialLinks.map((social, index) => (
-                  <Link key={index} to={social.url} target="_blank" rel="noopener noreferrer">
+                  <Link key={index} to={social.url} target="_blank" rel="noopener noreferrer" aria-level={link.area}>
                     <i className={social.icon}></i>
                   </Link>
                 ))}
@@ -81,7 +81,7 @@ const Footer = () => {
                 <ul className="list-unstyled">
                   {section.links.map((link, idx) => (
                     <li key={idx}>
-                      <Link className="para-1 light-text" to={link.url} aria-level={link.area}>
+                      <Link className="para-1 light-text" to={link.url}>
                         {link.text}
                       </Link>
                     </li>
