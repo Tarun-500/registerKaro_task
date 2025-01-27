@@ -42,6 +42,7 @@ function App() {
       <Subscription />
       <CompaniesLogoSection />
       <Footer />
+      <Analytics />
     </Router>
   );
 }
