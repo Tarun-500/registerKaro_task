@@ -108,12 +108,12 @@ const HappyClient = () => {
   }, []);
 
   return (
-    <section className="float_logo_section section_space">
+    <section className="float_logo_section section-space">
       <Heading 
       mainHeading="Our Happy Clients"
       align="center"
       />
-      <p className="mx-800 mx-auto para-1 light-text">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service. </p>
+      <p className="mx-800 mx-auto para-1 text-center light-text mb-4">Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service. </p>
       <div className="canvas-container">
         {images.map((_, index) => (
           <div className="canvas-box" key={index}>

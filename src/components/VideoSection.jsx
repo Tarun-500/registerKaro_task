@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import Heading from "../UI_components/Heading";
 import { IoMdFlashlight } from "react-icons/io";
 import { MdOutlineAutoGraph } from "react-icons/md";
-const videoId = "lYO6FqbN3-s?si=6moAz498QPWXgCcK"
+const videoId = "https://www.youtube.com/embed/lYO6FqbN3-s?si=G1SZWEG01RihUrSF"
 const VideoSection = () => {
 
 
@@ -58,15 +58,15 @@ const VideoSection = () => {
                 loading="lazy"
               />
             </div> */}
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
-                title={"title"}
-                width={"100%"}
-                height={"100%"}
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              ></iframe>
-
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
+              title={"register karo video"}
+              width={"100%"}
+              height={"100%"}
+              allow="autoplay; encrypted-media"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </Col>
         </Row>
       </Container>
