@@ -83,7 +83,7 @@ export default function Header() {
             <span className="position-relative">
               <Button
                 color={"transparent"}
-                ariaLabel={"search button"}
+                arialabel={"search button"}
                 textcolor={"var(--blue-color)"}
                 fs={"var(--fs-24px)"}
                 onClick={toggleSearch}
@@ -97,7 +97,7 @@ export default function Header() {
             </span>
             <Button
               color={"transparent"}
-              ariaLabel={"menu button"}
+              arialabel={"menu button"}
               textcolor={"var(--blue-color)"}
               fs={"var(--fs-24px)"}
               onClick={toggleMenu}
@@ -151,6 +151,7 @@ export default function Header() {
               <NavItem className="d-none d-lg-block position-relative">
                 <Button
                   color={"transparent"}
+                  arialabel={"search icon"}
                   textcolor={"var(--blue-color)"}
                   fs={"var(--fs-24px)"}
                   onClick={toggleSearch}

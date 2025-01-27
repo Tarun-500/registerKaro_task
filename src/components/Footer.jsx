@@ -96,6 +96,7 @@ const Footer = () => {
               <Button
                 onClick={scrollToTop}
                 className="btn-top"
+                aria-label="back to top"
                 style={{
                   width: "56px",
                   background: "var(--primary-color)",
