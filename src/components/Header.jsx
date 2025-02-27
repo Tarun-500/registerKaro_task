@@ -76,7 +76,7 @@ export default function Header() {
       </div>
       <div className="header-section">
         <Navbar expand="lg" className="w-100">
-          <NavbarBrand href="/">
+          <NavbarBrand to="/">
             <img src={Logo} alt="Logo" className="logo" />
           </NavbarBrand>
           <div className="d-lg-none">
