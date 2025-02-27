@@ -22,4 +22,10 @@ Currently, two official plugins are available:
  
  ![Screenshot 2025-01-27 154427](https://github.com/user-attachments/assets/7c3de883-0401-4c0a-ace8-8b662ebbd67e)
 
+### Pagespeed - https://pagespeed.web.dev/analysis/https-register-karo-task-vercel-app/fw15sfdpgn?form_factor=desktop
+![image](https://github.com/user-attachments/assets/0a87bd73-6e47-41cf-bb34-63c6624229dd)
+https://pagespeed.web.dev/analysis/https-register-karo-task-vercel-app/fw15sfdpgn?form_factor=mobile
+![image](https://github.com/user-attachments/assets/8f181fde-1bba-48e5-a722-830daf1e7fe8)
+
+
 Figma Design Link - https://www.figma.com/design/BWtutOCqSUinQiqoSCDQ0c/Register-Karo-Home-Page-(Copy)?node-id=1-21315&t=9C0PMt6b4vvupYpo-0
